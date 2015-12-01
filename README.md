@@ -1,3 +1,3 @@
 # Project-Phase-1
-Jalen Kenny <br/>
-Andrew Hui - hui202
+Jalen Kenny - theprojaleno <br/>
+Andrew Hui - hui202 <br/>
