@@ -17,10 +17,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("AJKM", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li class="active"><a href="@Url.Action("ConsumerDashboard", "Accounts")">Dashboard</a></li>
+                    <li class="active"><a href="@Url.Action("Data", "Accounts")">Data</a></li>
+                    <li class="active"><a href="@Url.Action("Insights", "Accounts")">Insights</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("LoginSignUp", "Accounts")">Log in / Sign up</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Support <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("FAQ", "Home")">FAQ</a></li>
+                            <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
