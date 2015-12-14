@@ -117,6 +117,9 @@
     <Content Include="Views\Accounts\AdminDashboard.cshtml" />
     <Content Include="Views\Accounts\BusinessDashboard.cshtml" />
     <Content Include="Views\Accounts\ConsumerDashboard.cshtml" />
+    <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\Accounts\LoginSignUp.cshtml" />
+    <Content Include="Views\Accounts\SignUp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

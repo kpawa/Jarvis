@@ -1,0 +1,13 @@
+﻿@model AJKM_phase1.RouteConfig
+
+@{
+    ViewBag.Title = "LoginSignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login / Sign Up</h2>
+
+<button onclick="location.href='@Url.Action("Login", "Accounts")';return false;">Login</button>
+<br/>
+<br />
+<button onclick="location.href='@Url.Action("SignUp", "Accounts")';return false;">Sign Up</button>
