@@ -87,6 +87,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\energy.PNG" />
+    <Content Include="images\graph-image.png" />
+    <Content Include="images\hand-streched-palm-512.png" />
+    <Content Include="images\icons-butler.png" />
+    <Content Include="images\logov1.png" />
+    <Content Include="images\sales.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
