@@ -85,9 +85,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="images\energy.PNG" />
-    <Content Include="images\graph-image.png" />
-    <Content Include="images\sales.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -110,13 +107,13 @@
     <Content Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Accounts\ConsumerDashboard.cshtml" />
+    <Content Include="Views\Accounts\Insights.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Accounts\AdminDashboard.cshtml" />
-    <Content Include="Views\Accounts\BusinessDashboard.cshtml" />
+    <Content Include="Views\Accounts\DeviceManager.cshtml" />
+    <Content Include="Views\Accounts\Data.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
