@@ -87,8 +87,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\electrical_consumption_chart.jpg" />
     <Content Include="images\energy.PNG" />
+    <Content Include="images\floor_plan.png" />
     <Content Include="images\graph-image.png" />
+    <Content Include="images\Pie_Chart.jpg" />
     <Content Include="images\sales.PNG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

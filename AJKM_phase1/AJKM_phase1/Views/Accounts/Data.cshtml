@@ -2,40 +2,59 @@
     ViewBag.Title = "Data";
 }
 
-<h1>Dashboard<h1>
-        <h2>December 11, 2015<h2>
+<h1>Dashboard</h1>
 
-                <h2>Devices currently online: 75</h2>
-                <p>Lights: 24</p>
-                <p>Coffee Machines: 1</p>
-                <p>Refrigerators: 2</p>
-                <p>Thermostats: 7</p>
-                <p>Smoke Detectors: 6</p>
-                <p>Security Cameras: 4</p>
-                <p>Door Locks: </p>
-                <p>... Click for more ...</p>
+                                 <div class="container-fluid">
+                                     <h1>Household Data Central</h1>
+                                     <h2>
+                                         December 11, 2015</h2>
+                                             <div class="row">
+                                                 <!-- COLUMN ONE -->
+                                                 <div class="col-sm-4 col-md-4" style="background-color: white;">
+                                                     <h1>Total Consumption</h1>
+                                                     <h2>Electricity Consumption (2015): 480 KW/h</h2>
+                                                     <h2>Water Consumption (2015): 1660L</h2>
+                                                     <h2>Natural Gas Consumption (2015): 35 GJ</h2>
+                                                     <br />
+                                                     <br />
+                                                     <h2>Integration with Suppliers</h2>
+                                                     <p>Grocery Deliveries</p>
+                                                     <p>Cleaning Supplies</p>
+                                                     <p>Add a new supplier</p>
+                                                 </div>
+
+                                                 <!-- COLUMN TWO -->
+                                                 <div class="col-sm-4 col-md-4" style="background-color:#e5f7ff;">
+                                                     <h1>Devices</h1>
+                                                     <h2>Devices currently online: 75</h2>
+                                                     <p>Lights: 24</p>
+                                                     <p>Coffee Machines: 1</p>
+                                                     <p>Refrigerators: 2</p>
+                                                     <p>Thermostats: 7</p>
+                                                     <p>Smoke Detectors: 6</p>
+                                                     <p>Security Cameras: 4</p>
+                                                     <p>Door Locks: </p>
+                                                     <p>... Click for more ...</p>
+                                                 </div>
+                                                 <!-- COLUMN THREE -->
+                                                 <div class="col-sm-4 col-md-4" style="background-color: white;">
+                                                     <h1>Event Monitor</h1>
+                                                     <p>7:45 AM Front Door Auto-lock engaged.</p>
+                                                     <p>7:04 AM Coffee Machine Auto-off.</p>
+                                                     <p>6:30 AM Kitchen Light Auto-on.</p>
+                                                     <p>6:00 AM Thermostats 4, 5 Auto-on 26 degrees.</p>
+                                                     <p>... Monitor More Recent Events ...</p>
+                                                     <h2>Scheduled Events</h2>
+                                                     <p>Coffee Machine: Daily 7 AM On.</p>
+                                                     <p>Lights: Daily 10 PM Off.</p>
+                                                     <p>Thermostats 4, 5 Daily Auto-on 26 degrees</p>
+                                                     <p>...<p>
+                                                 </div>
+                                             </div>
+                                     <img src="images/electrical_consumption_chart.jpg" alt="Electrical Consumption Chart" width="883" height="442" />
+                                 </div>
 
 
-                <h2>Electricity Consumption</h2>
-                <h2>Water Consumption</h2>
-                <h2>Natural Gas Consumption</h2>
-
-
-                <h2>Scheduled Events</h2>
-                <p>Coffee Machine: Daily 7 AM On.</p>
-                <p>Lights: Daily 10 PM Off.</p>
-                <p>Thermostats 4, 5 Daily Auto-on 26 degrees</p>
-                <p>...<p>
-
-                <p>7:45 AM Front Door Auto-lock engaged.</p>
-                <p>7:04 AM Coffee Machine Auto-off.</p>
-                <p>6:30 AM Kitchen Light Auto-on.</p>
-                <p>6:00 AM Thermostats 4, 5 Auto-on 26 degrees.</p>
-                <p>... Monitor More Recent Events ...</p>
-
-                <h2>Integration with Suppliers</h2>
-                <p>Grocery Deliveries</p>
-                <p>Cleaning Supplies</p>
 
 
                 @Html.ActionLink("Go to Insights", "Insights", "Accounts")
