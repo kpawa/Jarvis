@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+
+<div style="border-right: 1px solid black;" class="col-sm-8">
+    <div class="col-sm-12">
+        <h3> Manage Providers </h3>
+        <ul>
+            <li> Add a provider </li>
+            <li> Add a provider device </li>
+            <li> Delete a provider device</li>
+            <li> Update provider details </li>
+            <li> Update device details </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <h3> Manage Consumer Accounts </h3>    
+        <ul>
+            <li> View all Consumer Accounts </li>
+            <li> Sign into Consumer Account </li>
+            <li> Create a new Consumer Account </li>
+            <li> Update a  Consumer Account Info </li>
+            <li> Delete a Consumer Account </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <h3> Manage Business Accounts </h3>
+        <ul>
+            <li> View all Business Accounts </li>
+            <li> Sign into Business Account </li>
+            <li> Create a new Business Account </li>
+            <li> Update a Business Account Info </li>
+            <li> Delete a Business Account </li>
+        </ul>
+    </div>
+</div>
+<div style="padding-left:20px;" class="col-sm-4">
+    <h2> Supported Devices </h2>
+    <div class="col-sm-12">
+        <h3> Lights </h3>
+            <ul>
+                <li> Bulb </li>
+                <li> Color Bulb </li>
+                <li> Ceiling Unit</li>
+            </ul>
+        <h3> Heating </h3>
+        <ul>
+            <li> Thermostat </li>
+        </ul>
+        <h3> Other </h3>
+        <ul>
+            <li> Coffee Machine </li>
+            <li> Camera </li>
+            <li> Lock</li>
+        </ul>
+    </div>
+</div>

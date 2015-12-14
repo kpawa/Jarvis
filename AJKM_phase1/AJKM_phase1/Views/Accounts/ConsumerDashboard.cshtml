@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Consumer Dashboard";
+}
+
+<h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+
+<div style="border-right: 1px solid black;" class="col-sm-8">
+    <img style="width: 100%;" src="~/images/energy.PNG"/>
+    <div>
+        <div class="col-sm-6">
+            <h2> Lights </h2>
+            <p> Lights are 5% of your houses total energy consumption. </p>
+            <p> The kitchen light has been on for the last 4 days. </p>
+        </div>
+        <div class="col-sm-6">
+            <h2> Heating </h2>
+            <p> Heating is 20% of your houses total energy consumption.</p>
+            <p> Average tempeture for your house this week was 20 degrees. </p>
+            <p> The tempeture in the living room is 5 degress above average.</p>
+        </div>
+        <div class="col-sm-12">
+            <h2> Other </h2>
+            <p> Your other smart devices are using 50% of your houses total energy consumption. </p>
+            <p> Cameras are all recording.</p>
+            <p> Coffee machine is set to brew at 7 am tommorow morning. </p>
+        </div>
+    </div>
+</div>
+<div style="padding-left:20px;"class="col-sm-4">
+    <h2> Your Devices </h2>
+    <div class="col-sm-12">
+        <h3> Lights </h3>
+        <ul>
+            <li> Kitchen </li>
+            <li> Dining Room </li>
+            <li> Master Bedroom </li>
+            <li> Living Room </li>
+        </ul>
+        <h3> Heating </h3>
+        <ul>
+            <li> Dining Room Thermostat </li>
+            <li> Living Room Thermostat </li>
+        </ul>
+        <h3> Other </h3>
+        <ul>
+            <li> Coffee Machine </li>
+            <li> Camera </li>
+        </ul>
+    </div>  
+</div>
+
