@@ -7,48 +7,55 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
+        
         <div class="container">
+            
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("AJKM", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="@Url.Action("Index", "home")">
+                    <img class="pull-left" src="~/images/logov1.png" width="60" style="margin: 10px; margin-right: 40px;">
+                </a>
+                @Html.ActionLink("Jarvis", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="@Url.Action("ConsumerDashboard", "Accounts")">Dashboard</a></li>
-                    <li class="active"><a href="@Url.Action("Data", "Accounts")">Data</a></li>
-                    <li class="active"><a href="@Url.Action("Insights", "Accounts")">Insights</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            User Role Dashboards <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("ConsumerDashboard", "Accounts")">Consumer</a></li>
+                            <li><a href="@Url.Action("BusinessDashboard", "Accounts")">Business</a></li>
+                            <li><a href="@Url.Action("AdminDashBoard", "Accounts")">Admin</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("Data", "Accounts")">Data</a></li>
+                    <li><a href="@Url.Action("Insights", "Accounts")">Insights</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="@Url.Action("LoginSignUp", "Accounts")">Log in / Sign up</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Support <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="@Url.Action("FAQ", "Home")">FAQ</a></li>
-                            <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="@Url.Action("About", "Home")">About</a></li>
+                    <li><a href="@Url.Action("Support", "Home")">Support</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="container body-content">
+    <div class="container body-content" style="margin-top: 40px;">
         @RenderBody()
         <hr />
-       
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Jarvis</p>
+        </footer>
     </div>
-    <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-    </footer>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>

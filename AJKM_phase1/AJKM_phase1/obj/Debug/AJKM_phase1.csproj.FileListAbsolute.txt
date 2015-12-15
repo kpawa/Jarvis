@@ -52,3 +52,21 @@ D:\Project\Git\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc.xml
 D:\Project\Git\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.csprojResolveAssemblyReference.cache
 D:\Project\Git\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
 D:\Project\Git\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\AJKM_phase1.dll.config
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\AJKM_phase1.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\AJKM_phase1.pdb
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Helpers.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Razor.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Deployment.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Razor.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Razor.xml
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.xml
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Deployment.xml
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Razor.xml
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Helpers.xml
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc.xml
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.csprojResolveAssemblyReference.cache
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
+E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
