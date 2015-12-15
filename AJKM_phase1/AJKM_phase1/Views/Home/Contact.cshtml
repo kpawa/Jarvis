@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contact Us</h2>
+
+<form>
+    <label>First Name: </label><br />
+    <input 
+        type="text"
+        name="firstName"
+        ng-model="firstName.text"
+        required/><br /><br />
+    <label>Last Name: </label><br />
+    <input 
+        type="text"
+        name="lastName"
+        ng-model="lastName.text"
+        required /><br /><br />
+    <label>Email Address: </label><br />
+    <input
+        type="email"
+        name="input"
+        ng-model="email.txt"
+        required /><br /><br />
+    <label>Subject: </label><br />
+    <input
+        type="text"
+        name="subject"
+        ng-model="subject.text" /><br /><br />
+    <label>Message</label><br />
+    <textarea id="messageTextArea"
+            name="message"
+            ng-model="message.body"
+            required>
+    </textarea><br /><br />
+
+    <input type="submit" value="Send Email" />
+</form>
