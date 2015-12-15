@@ -70,3 +70,21 @@ E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\bin\
 E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.csprojResolveAssemblyReference.cache
 E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
 E:\Documents\BCIT\Internal Project\Local Repository\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\AJKM_phase1.dll.config
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\AJKM_phase1.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\AJKM_phase1.pdb
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Helpers.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Razor.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Deployment.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Razor.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Razor.xml
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.xml
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Deployment.xml
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Razor.xml
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Helpers.xml
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc.xml
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.csprojResolveAssemblyReference.cache
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
+C:\Users\A00867806\Desktop\AJKM\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
