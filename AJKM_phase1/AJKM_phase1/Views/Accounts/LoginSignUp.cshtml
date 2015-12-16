@@ -4,12 +4,23 @@
     ViewBag.Title = "LoginSignUp";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="login-signup">
+    <div class="col-sm-6">
+        @{
+            Html.RenderPartial("Partials/Login");
+        }
+    </div>
+    <div class="col-sm-6">
+        @Html.Partial("Partials/SignUp")
+    </div>
+</div>
 
-<div class="col-sm-6">
+
+@*<div class="col-sm-6">
     <h2>Log in</h2>
     <button onclick="location.href='@Url.Action("Login", "Accounts")';return false;">Log in</button>
 </div>
 <div class="col-sm-6">
     <h2>Sign Up</h2>
     <button onclick="location.href='@Url.Action("SignUp", "Accounts")';return false;">Sign up</button>
-</div>
+</div>*@

@@ -11,19 +11,17 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        
-        <div class="container">
-            
+        <a class="" href="@Url.Action("Index", "home")">
+            <img class="pull-left logo" src="~/images/logov1.png">
+        </a>
+        <div class="container">         
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <a href="@Url.Action("Index", "home")">
-                    <img class="pull-left" src="~/images/logov1.png" width="60" style="margin: 10px; margin-right: 40px;">
-                </a>
-                @Html.ActionLink("FROM DEV", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </button>                
+                @Html.ActionLink("Jarvis", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -39,23 +37,27 @@
                     </li>
                     <li><a href="@Url.Action("Data", "Accounts")">Data</a></li>
                     <li><a href="@Url.Action("Insights", "Accounts")">Insights</a></li>
+                    <li><a href="@Url.Action("About", "Home")">About</a></li>
+                    <li><a href="@Url.Action("Support", "Home")">Support</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="@Url.Action("LoginSignUp", "Accounts")">Log in / Sign up</a></li>
-                    <li><a href="@Url.Action("About", "Home")">About</a></li>
-                    <li><a href="@Url.Action("Support", "Home")">Support</a></li>
+                    
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="container body-content" style="margin-top: 40px;">
-        @RenderBody()
+    <div class="container body-content">
+        <div class="clearfix col-sm-12">
+            @RenderBody()
+        </div>
+        <hr />
+        <footer>
+            <p style="text-align: center">&copy; @DateTime.Now.Year - Jarvis</p>
+        </footer>
     </div>
-    <hr />
-    <footer>
-        <p style="text-align: center">&copy; @DateTime.Now.Year - Jarvis</p>
-    </footer>
+    
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
