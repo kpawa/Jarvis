@@ -5,9 +5,19 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
+    margin-top: 40px;
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.body-content a {
+    /*color: inherit;*/
+}
+.body-content a:hover {
+    position: relative;
+    top: -4px;
+ }
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -18,3 +28,88 @@ select {
     width: 400px;
     height: 200px;
 }
+
+/* CUSTOM STYLES */
+
+/* SITE WIDE */
+
+fieldset.fieldset-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+
+    border-radius: 7px;
+}
+
+legend.fieldset-border {
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+    font-size: 25px;
+}
+
+.page-content {
+    border-right: 1px solid #333;
+}
+
+/* NAV BAR */
+.logo {
+    margin: 10px 3%;
+    height: 60px;
+}
+
+
+/* HOME PAGE */
+
+
+.home-background {
+    width: 400%;
+    margin: 0 auto;
+    margin-left: -175%;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* want to make it so background has some opacity eventually */
+.home-writeup {
+    margin-top: 70px;
+    position: relative;
+    left: 0%;
+    display: block;
+    z-index: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px;
+    background: #FFFFFF;
+}
+
+.home-writeup h1 {
+    margin: 0px;
+    width: 100%;
+    background: #EEEEEE;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.home-writeup p {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.home-writeup::after {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: #FFFFFF;
+    opacity: 0.4;
+}
+
+.home-page {
+
+}
+

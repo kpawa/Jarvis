@@ -3,19 +3,10 @@
     ViewBag.Title = "Admin Dashboard";
 }
 
-<h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
 
-<div style="border-right: 1px solid black;" class="col-sm-8">
-    <div class="col-sm-12">
-        <h3> Manage Providers </h3>
-        <ul>
-            <li> Add a provider </li>
-            <li> Add a provider device </li>
-            <li> Delete a provider device</li>
-            <li> Update provider details </li>
-            <li> Update device details </li>
-        </ul>
-    </div>
+
+<div class="col-sm-8">
+    <h2 style="margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
     <div class="col-sm-6">
         <h3> Manage Consumer Accounts </h3>    
         <ul>
@@ -37,7 +28,7 @@
         </ul>
     </div>
 </div>
-<div style="padding-left:20px;" class="col-sm-4">
+<div style="padding-left:20px; border-left: 1px solid #333;" class="col-sm-4">
     <h2> Supported Devices </h2>
     <div class="col-sm-12">
         <h3> Lights </h3>
