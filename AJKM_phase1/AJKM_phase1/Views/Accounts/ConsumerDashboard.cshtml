@@ -2,9 +2,10 @@
     ViewBag.Title = "Consumer Dashboard";
 }
 <div class="container">
-<h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
 
-<div style="border-right: 1px solid black;" class="col-sm-8">
+
+<div  class="col-sm-8 page-content">
+    <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
     <img style="width: 100%;" src="~/images/energy.PNG"/>
     <div>
         <div class="col-sm-6">
@@ -26,8 +27,8 @@
         </div>
     </div>
 </div>
-<div style="padding-left:20px;"class="col-sm-4">
-    <h2><a href="@Url.Action("DeviceManager", "Accounts")"> Your Devices </a></h2>
+<div style="padding-left:20px;"class="col-sm-4 side-bar">
+    <h2><a href="@Url.Action("Data", "Accounts")"> Your Devices </a></h2>
     <div class="col-sm-12">
         <h3> Lights </h3>
         <ul>
@@ -46,6 +47,7 @@
             <li> Coffee Machine </li>
             <li> Camera </li>
         </ul>
+        @Html.ActionLink("Register Devices", "RegisterDevices")
     </div>  
 </div>
-    </div>
+ </div>

@@ -58,5 +58,11 @@ namespace AJKM_phase1.Controllers
         {
             return View();
         }
+
+        public ActionResult RegisterDevices()
+        {
+            return View();
+        }
+
     }
 }

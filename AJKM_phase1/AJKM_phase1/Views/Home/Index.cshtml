@@ -3,11 +3,22 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="home-page">
+    <div class="col-sm-5 home-writeup consumer">
+        <h1><a href="@Url.Action("LoginSignUp", "Accounts")">Consumer</a></h1>
+        <p> Manage all your smart devices through a single dashboard. </p>
+        <p> View device data and power usage for each device. </p>
+        <p> See the cost of each device. </p>
+        <p> Use our insights to cut down on costs. </p>
+    </div>
+    <div class="col-sm-2">
+        <img class="home-background" src="~/images/smart-home.png" />
+    </div>
 
-<div class="col-sm-6">
-    <h1><a href="@Url.Action("Login", "Accounts")">Consumer</a></h1>
-</div>
-
-<div class="col-sm-6">
-    <h1><a href="@Url.Action("Login", "Accounts")">Business</a></h1>
+    <div class="col-sm-5  home-writeup business">
+        <h1> <a href="@Url.Action("LoginSignUp", "Accounts")">Business </a></h1>
+        <p> View anonymous device data. </p>
+        <p> Analyze usage statistics. </p>
+        <p> Get insights into who is using what products when. </p>
+    </div>
 </div>
