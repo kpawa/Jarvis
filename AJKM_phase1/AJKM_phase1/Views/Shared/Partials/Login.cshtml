@@ -18,6 +18,11 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <button class="btn btn-default" onclick="location.href='@Url.Action("consumerdashboard", "Accounts")';return false;">Log in</button>
             </div>
+            <div class="col-sm-offset-2 col-sm-10">
+                @Html.ActionLink("Consumer User", "ConsumerDashboard") |
+                @Html.ActionLink("Business User", "BusinessDashboard") |
+                @Html.ActionLink("Admin User", "AdminDashboard")
+            </div>
         </div>
     </fieldset>
 </form>
