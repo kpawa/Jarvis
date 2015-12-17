@@ -14,13 +14,13 @@
         <a class="" href="@Url.Action("Index", "home")">
             <img class="pull-left logo" src="~/images/logov1.png">
         </a>
-        <div class="container">         
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>                
+                </button>
                 @Html.ActionLink("Jarvis", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
@@ -42,7 +42,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="@Url.Action("LoginSignUp", "Accounts")">Log in / Sign up</a></li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -51,13 +51,13 @@
     <div class="container body-content">
         <div class="clearfix col-sm-12">
             @RenderBody()
+            <footer class="col-sm-12">
+                <hr />
+                <p style="text-align: center">&copy; @DateTime.Now.Year - Jarvis</p>
+            </footer>
         </div>
-        <hr />
-        <footer>
-            <p style="text-align: center">&copy; @DateTime.Now.Year - Jarvis</p>
-        </footer>
     </div>
-    
+
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
