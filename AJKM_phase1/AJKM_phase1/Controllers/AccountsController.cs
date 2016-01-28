@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 
 namespace AJKM_phase1.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class AccountsController : Controller
     {
         // leave blank

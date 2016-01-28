@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JarvisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="accountID" />
+          </Key>
+          <Property Name="accountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="firstname" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="lastname" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="birthdate" Type="date" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Details">
+          <Key>
+            <PropertyRef Name="accountID" />
+          </Key>
+          <Property Name="accountID" Type="int" Nullable="false" />
+          <Property Name="familysize" Type="int" />
+          <Property Name="children" Type="int" />
+          <Property Name="adults" Type="int" />
+          <Property Name="rooms" Type="int" />
+          <Property Name="address" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="deviceID" />
+          </Key>
+          <Property Name="deviceID" Type="int" Nullable="false" />
+          <Property Name="category" Type="varchar" MaxLength="255" />
+          <Property Name="accountID" Type="int" Nullable="false" />
+          <Property Name="dataID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeviceData">
+          <Key>
+            <PropertyRef Name="dataID" />
+          </Key>
+          <Property Name="dataID" Type="int" Nullable="false" />
+          <Property Name="state" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="kwhour" Type="real" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProviderAccount">
+          <Key>
+            <PropertyRef Name="accountID" />
+          </Key>
+          <Property Name="accountID" Type="int" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="provider" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StoredData">
+          <Key>
+            <PropertyRef Name="deviceID" />
+          </Key>
+          <Property Name="deviceID" Type="int" Nullable="false" />
+          <Property Name="state" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="datetime" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__Details__account__25869641">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="Details" Type="Self.Details" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="accountID" />
+            </Principal>
+            <Dependent Role="Details">
+              <PropertyRef Name="accountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__accountI__2D27B809">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="accountID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="accountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__dataID__2E1BDC42">
+          <End Role="DeviceData" Type="Self.DeviceData" Multiplicity="1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceData">
+              <PropertyRef Name="dataID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="dataID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProviderA__accou__286302EC">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="ProviderAccount" Type="Self.ProviderAccount" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="accountID" />
+            </Principal>
+            <Dependent Role="ProviderAccount">
+              <PropertyRef Name="accountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StoredDat__devic__31EC6D26">
+          <End Role="Device" Type="Self.Device" Multiplicity="1" />
+          <End Role="StoredData" Type="Self.StoredData" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="deviceID" />
+            </Principal>
+            <Dependent Role="StoredData">
+              <PropertyRef Name="deviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JarvisModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="kpawa" store:Type="Tables" />
+          <EntitySet Name="Details" EntityType="Self.Details" Schema="kpawa" store:Type="Tables" />
+          <EntitySet Name="Device" EntityType="Self.Device" Schema="kpawa" store:Type="Tables" />
+          <EntitySet Name="DeviceData" EntityType="Self.DeviceData" Schema="kpawa" store:Type="Tables" />
+          <EntitySet Name="ProviderAccount" EntityType="Self.ProviderAccount" Schema="kpawa" store:Type="Tables" />
+          <EntitySet Name="StoredData" EntityType="Self.StoredData" Schema="kpawa" store:Type="Tables" />
+          <AssociationSet Name="FK__Details__account__25869641" Association="Self.FK__Details__account__25869641">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="Details" EntitySet="Details" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__accountI__2D27B809" Association="Self.FK__Device__accountI__2D27B809">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__dataID__2E1BDC42" Association="Self.FK__Device__dataID__2E1BDC42">
+            <End Role="DeviceData" EntitySet="DeviceData" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProviderA__accou__286302EC" Association="Self.FK__ProviderA__accou__286302EC">
+            <End Role="Account" EntitySet="Account" />
+            <End Role="ProviderAccount" EntitySet="ProviderAccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StoredDat__devic__31EC6D26" Association="Self.FK__StoredDat__devic__31EC6D26">
+            <End Role="Device" EntitySet="Device" />
+            <End Role="StoredData" EntitySet="StoredData" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JarvisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="accountID" />
+          </Key>
+          <Property Name="accountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="firstname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="birthdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Detail" Relationship="Self.FK__Details__account__25869641" FromRole="Account" ToRole="Details" />
+          <NavigationProperty Name="Devices" Relationship="Self.FK__Device__accountI__2D27B809" FromRole="Account" ToRole="Device" />
+          <NavigationProperty Name="ProviderAccount" Relationship="Self.FK__ProviderA__accou__286302EC" FromRole="Account" ToRole="ProviderAccount" />
+        </EntityType>
+        <EntityType Name="Detail">
+          <Key>
+            <PropertyRef Name="accountID" />
+          </Key>
+          <Property Name="accountID" Type="Int32" Nullable="false" />
+          <Property Name="familysize" Type="Int32" />
+          <Property Name="children" Type="Int32" />
+          <Property Name="adults" Type="Int32" />
+          <Property Name="rooms" Type="Int32" />
+          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Details__account__25869641" FromRole="Details" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="deviceID" />
+          </Key>
+          <Property Name="deviceID" Type="Int32" Nullable="false" />
+          <Property Name="category" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="accountID" Type="Int32" Nullable="false" />
+          <Property Name="dataID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Device__accountI__2D27B809" FromRole="Device" ToRole="Account" />
+          <NavigationProperty Name="DeviceData" Relationship="Self.FK__Device__dataID__2E1BDC42" FromRole="Device" ToRole="DeviceData" />
+          <NavigationProperty Name="StoredData" Relationship="Self.FK__StoredDat__devic__31EC6D26" FromRole="Device" ToRole="StoredData" />
+        </EntityType>
+        <EntityType Name="DeviceData">
+          <Key>
+            <PropertyRef Name="dataID" />
+          </Key>
+          <Property Name="dataID" Type="Int32" Nullable="false" />
+          <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="kwhour" Type="Single" Nullable="false" />
+          <NavigationProperty Name="Devices" Relationship="Self.FK__Device__dataID__2E1BDC42" FromRole="DeviceData" ToRole="Device" />
+        </EntityType>
+        <EntityType Name="ProviderAccount">
+          <Key>
+            <PropertyRef Name="accountID" />
+          </Key>
+          <Property Name="accountID" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provider" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__ProviderA__accou__286302EC" FromRole="ProviderAccount" ToRole="Account" />
+        </EntityType>
+        <EntityType Name="StoredData">
+          <Key>
+            <PropertyRef Name="deviceID" />
+          </Key>
+          <Property Name="deviceID" Type="Int32" Nullable="false" />
+          <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="datetime" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Device" Relationship="Self.FK__StoredDat__devic__31EC6D26" FromRole="StoredData" ToRole="Device" />
+        </EntityType>
+        <Association Name="FK__Details__account__25869641">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="Details" Type="Self.Detail" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="accountID" />
+            </Principal>
+            <Dependent Role="Details">
+              <PropertyRef Name="accountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__accountI__2D27B809">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="accountID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="accountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProviderA__accou__286302EC">
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
+          <End Role="ProviderAccount" Type="Self.ProviderAccount" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Account">
+              <PropertyRef Name="accountID" />
+            </Principal>
+            <Dependent Role="ProviderAccount">
+              <PropertyRef Name="accountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Device__dataID__2E1BDC42">
+          <End Role="DeviceData" Type="Self.DeviceData" Multiplicity="1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeviceData">
+              <PropertyRef Name="dataID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="dataID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StoredDat__devic__31EC6D26">
+          <End Role="Device" Type="Self.Device" Multiplicity="1" />
+          <End Role="StoredData" Type="Self.StoredData" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Device">
+              <PropertyRef Name="deviceID" />
+            </Principal>
+            <Dependent Role="StoredData">
+              <PropertyRef Name="deviceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JarvisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Account" />
+          <EntitySet Name="Details" EntityType="Self.Detail" />
+          <EntitySet Name="Devices" EntityType="Self.Device" />
+          <EntitySet Name="DeviceDatas" EntityType="Self.DeviceData" />
+          <EntitySet Name="ProviderAccounts" EntityType="Self.ProviderAccount" />
+          <EntitySet Name="StoredDatas" EntityType="Self.StoredData" />
+          <AssociationSet Name="FK__Details__account__25869641" Association="Self.FK__Details__account__25869641">
+            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Details" EntitySet="Details" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__accountI__2D27B809" Association="Self.FK__Device__accountI__2D27B809">
+            <End Role="Account" EntitySet="Accounts" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProviderA__accou__286302EC" Association="Self.FK__ProviderA__accou__286302EC">
+            <End Role="Account" EntitySet="Accounts" />
+            <End Role="ProviderAccount" EntitySet="ProviderAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Device__dataID__2E1BDC42" Association="Self.FK__Device__dataID__2E1BDC42">
+            <End Role="DeviceData" EntitySet="DeviceDatas" />
+            <End Role="Device" EntitySet="Devices" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StoredDat__devic__31EC6D26" Association="Self.FK__StoredDat__devic__31EC6D26">
+            <End Role="Device" EntitySet="Devices" />
+            <End Role="StoredData" EntitySet="StoredDatas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JarvisModelStoreContainer" CdmEntityContainer="JarvisEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="JarvisModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="accountID" ColumnName="accountID" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Details">
+            <EntityTypeMapping TypeName="JarvisModel.Detail">
+              <MappingFragment StoreEntitySet="Details">
+                <ScalarProperty Name="accountID" ColumnName="accountID" />
+                <ScalarProperty Name="familysize" ColumnName="familysize" />
+                <ScalarProperty Name="children" ColumnName="children" />
+                <ScalarProperty Name="adults" ColumnName="adults" />
+                <ScalarProperty Name="rooms" ColumnName="rooms" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Devices">
+            <EntityTypeMapping TypeName="JarvisModel.Device">
+              <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="deviceID" ColumnName="deviceID" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="accountID" ColumnName="accountID" />
+                <ScalarProperty Name="dataID" ColumnName="dataID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceDatas">
+            <EntityTypeMapping TypeName="JarvisModel.DeviceData">
+              <MappingFragment StoreEntitySet="DeviceData">
+                <ScalarProperty Name="dataID" ColumnName="dataID" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="kwhour" ColumnName="kwhour" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProviderAccounts">
+            <EntityTypeMapping TypeName="JarvisModel.ProviderAccount">
+              <MappingFragment StoreEntitySet="ProviderAccount">
+                <ScalarProperty Name="accountID" ColumnName="accountID" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="provider" ColumnName="provider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StoredDatas">
+            <EntityTypeMapping TypeName="JarvisModel.StoredData">
+              <MappingFragment StoreEntitySet="StoredData">
+                <ScalarProperty Name="deviceID" ColumnName="deviceID" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
