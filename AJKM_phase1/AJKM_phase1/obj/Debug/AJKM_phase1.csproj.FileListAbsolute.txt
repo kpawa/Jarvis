@@ -118,3 +118,7 @@ C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.We
 C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Razor.xml
 C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.Helpers.xml
 C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc.xml
+C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\EntityFramework.dll
+C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\EntityFramework.SqlServer.dll
+C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\EntityFramework.xml
+C:\Users\A00867806\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\EntityFramework.SqlServer.xml
