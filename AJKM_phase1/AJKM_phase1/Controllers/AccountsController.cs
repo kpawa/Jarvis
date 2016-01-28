@@ -38,11 +38,6 @@ namespace AJKM_phase1.Controllers
         {
             return View();
         }
-        // MAT
-        public ActionResult BusinessDashboard()
-        {
-            return View();
-        }
         // KULLY
         public ActionResult Data()
         {
