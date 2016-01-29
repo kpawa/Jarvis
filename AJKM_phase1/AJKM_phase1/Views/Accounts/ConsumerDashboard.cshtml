@@ -8,23 +8,54 @@
     <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
     <img style="width: 100%;" src="~/images/energy.PNG"/>
     <div>
-        <div class="col-sm-6">
-            <h2> Lights </h2>
-            <p> Lights are 5% of your houses total energy consumption. </p>
-            <p> The kitchen light has been on for the last 4 days. </p>
+        
+        <div>
+            <table>
+                <tr>
+                    <th style="width: 200px;">Device Id</th>
+                    <th style="width: 200px;">State</th>
+                    <th style="width: 200px;">Time</th>
+                    <th style="width: 200px;">KW/h</th>
+                </tr>
+                <tr>
+                    <td>NestLabs Thermostat</td>
+                    <td>23 degrees Celsius</td>
+                    <td>5 mins. ago</td>
+                    <td>0.002</td>
+                </tr>
+                <tr>
+                    <td>WeMo Light #1</td>
+                    <td>Off</td>
+                    <td>2 hous ago</td>
+                    <td>0.01</td>
+                </tr>
+                <tr>
+                    <td>WeMo Light #2</td>
+                    <td>On</td>
+                    <td>10 min. ago</td>
+                    <td>0.1</td>
+                </tr>
+                <tr>
+                    <td>June Intelligent Oven</td>
+                    <td>350 degrees Celsius</td>
+                    <td>5 min. ago</td>
+                    <td>0.1</td>
+                </tr>
+                <tr>
+                    <td style="text-overflow: ellipsis;">LG Smart ThinQ Refrigerator</td>
+                    <td style="text-overflow: ellipsis;">Fridge: 3 degrees Celsius/ IceBox: -2 degrees Celsius</td>
+                    <td style="text-overflow: ellipsis;">10 min. ago</td>
+                    <td>2.3</td>
+                </tr>
+                <tr>
+                    <td>Apple TV</td>
+                    <td>On - Channel 43</td>
+                    <td>5 min. ago</td>
+                    <td>0.8</td>
+                </tr>
+            </table>
         </div>
-        <div class="col-sm-6">
-            <h2> Heating </h2>
-            <p> Heating is 20% of your houses total energy consumption.</p>
-            <p> Average tempeture for your house this week was 20 degrees. </p>
-            <p> The tempeture in the living room is 5 degress above average.</p>
-        </div>
-        <div class="col-sm-12">
-            <h2> Other </h2>
-            <p> Your other smart devices are using 50% of your houses total energy consumption. </p>
-            <p> Cameras are all recording.</p>
-            <p> Coffee machine is set to brew at 7 am tommorow morning. </p>
-        </div>
+
     </div>
 </div>
 <div style="padding-left:20px;"class="col-sm-4 side-bar">
@@ -48,6 +79,11 @@
             <li> Camera </li>
         </ul>
         @Html.ActionLink("Register Devices", "RegisterDevices")
+
+        <hr>
+        @Html.ActionLink("Data View", "Data") | 
+        @Html.ActionLink("Account View", "AccountView") | 
+        @Html.ActionLink("Register Device", "RegisterDevices")
     </div>  
 </div>
  </div>

@@ -224,6 +224,8 @@
     <Content Include="Views\Shared\Partials\Login.cshtml" />
     <Content Include="Views\Shared\Partials\SignUp.cshtml" />
     <Content Include="Views\Accounts\RegisterDevices.cshtml" />
+    <Content Include="Views\Accounts\AccountView.cshtml" />
+    <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -61,5 +61,16 @@ namespace AJKM_phase1.Controllers
             return View();
         }
 
+        public ActionResult AccountView()
+        {
+            return View();
+        }
+
+        public ActionResult ViewAllConsumerAccounts()
+        {
+            return View();
+        }
+
+
     }
 }
