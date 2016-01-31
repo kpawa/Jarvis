@@ -4,16 +4,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="home-page">
-    <div class="col-sm-5 home-writeup consumer">
-        <h1><a href="@Url.Action("LoginSignUp", "Accounts")">Consumer</a></h1>
-        <p> Manage all your smart devices through a single dashboard. </p>
-        <p> View device data and power usage for each device. </p>
-        <p> See the cost of each device. </p>
-        <p> Use our insights to cut down on costs. </p>
+    <div class="col-sm-5 home-writeup">
+        <h1> Jarvis, the Smart Butler </h1>
+        <h3> Manage all your smart devices through a single dashboard. </h3>
+        <h3> View device data and power usage for each device. </h3>
+        <h3> See the cost of each device. </h3>
+        <h3> Use our insights to cut down on costs. </h3>
     </div>
     <div class="col-sm-2">
         <img class="home-background" src="~/images/smart-home.png" />
     </div>
 
-    
+    <div class="home-writeup-menu col-sm-5 home-writeup">
+        <h3>@Html.ActionLink("Login", "Login", "Accounts")</h3><br />
+        <h3>@Html.ActionLink("Sign-up for a free trial", "SignUp", "Accounts")</h3><br />
+        <h3>@Html.ActionLink("Learn more about Jarvis", "About")</h3><br />
+        <h3>@Html.ActionLink("Frequently Asked Questions", "FAQ")</h3><br />
+        <h3>@Html.ActionLink("Contact Us", "Contact")</h3><br />
 </div>

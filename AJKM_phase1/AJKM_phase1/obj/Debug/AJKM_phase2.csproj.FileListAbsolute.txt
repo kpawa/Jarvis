@@ -29,6 +29,5 @@ D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.Webpages.Razor.xml
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.Helpers.xml
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc.xml
-D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csprojResolveAssemblyReference.cache
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
