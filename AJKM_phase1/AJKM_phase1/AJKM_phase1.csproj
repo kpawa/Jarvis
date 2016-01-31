@@ -211,7 +211,6 @@
     <Content Include="Views\Accounts\DeviceManager.cshtml" />
     <Content Include="Views\Accounts\Data.cshtml" />
     <Content Include="Views\Accounts\AdminDashboard.cshtml" />
-    <Content Include="Views\Accounts\BusinessDashboard.cshtml" />
     <Content Include="Views\Accounts\ConsumerDashboard.cshtml" />
     <Content Include="Views\Accounts\Login.cshtml" />
     <Content Include="Views\Accounts\LoginSignUp.cshtml" />
@@ -224,8 +223,8 @@
     <Content Include="Views\Shared\Partials\Login.cshtml" />
     <Content Include="Views\Shared\Partials\SignUp.cshtml" />
     <Content Include="Views\Accounts\RegisterDevices.cshtml" />
-    <Content Include="Views\Accounts\AccountView.cshtml" />
     <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
+    <Content Include="Views\Accounts\AccountView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

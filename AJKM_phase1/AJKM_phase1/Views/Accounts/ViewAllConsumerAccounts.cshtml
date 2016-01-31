@@ -20,7 +20,7 @@
                         <th style="width: 200px;">Account Type</th>
                     </tr>
                     <tr>
-                        <td>janedoe</td>
+                        <td><a href="@Url.Action("ConsumerDashboard")"> janedoe </a></td>
                         <td>Jane</td>
                         <td>Doe</td>
                         <td>janedoe@gmail.com</td>
@@ -85,11 +85,10 @@
                 <li> Coffee Machine </li>
                 <li> Camera </li>
             </ul>
-            @Html.ActionLink("Register Devices", "RegisterDevices")
-            <hr>
+            @Html.ActionLink("Register Providers", "RegisterDevices") | 
             @Html.ActionLink("Data View", "Data") |
-            @Html.ActionLink("Account View", "AccountView") |
-            @Html.ActionLink("Register Device", "RegisterDevices")
+            @Html.ActionLink("Account View", "ViewAllConsumerAccounts") |
+            @Html.ActionLink("AdminDashboard", "AdminDashboard")
         </div>
     </div>
 </div>

@@ -11,7 +11,7 @@
         <h3> Manage Consumer Accounts </h3>
 
         <ul>
-            <li>@Html.ActionLink("View all Consumer Accounts", "#")</li>
+            <li>@Html.ActionLink("View all Consumer Accounts", "ViewAllConsumerAccounts")</li>
             <li> Sign into Consumer Account </li>
             <li> Create a new Consumer Account </li>
             <li> Update a  Consumer Account Info </li>
@@ -48,5 +48,9 @@
             <li> Camera </li>
             <li> Lock</li>
         </ul>
+        @Html.ActionLink("Register Providers", "RegisterDevices") | 
+        @Html.ActionLink("Data View", "Data") |
+        @Html.ActionLink("Account View", "ViewAllConsumerAccounts") |
+        @Html.ActionLink("AdminDashboard", "AdminDashboard")
     </div>
 </div>

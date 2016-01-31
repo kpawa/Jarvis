@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "AccountView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+
+    <div class="col-sm-8 page-content">
+        <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+        <div>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>Profile <a href="#"> Edit </a></h3>
+                            <ul>
+                                <li>User Name: janedoe</li>
+                                <li>First Name: Jane </li>
+                                <li>Last Name: Doe </li>
+                                <li>Email: janedoe@gmail.com</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <h3>Account Details <a href="#"> Edit </a></h3>
+                            <ul>
+                                <li>Account Type: Basic</li>
+                                <li>Payment Method: Visa</li>
+                                <li>Payment Period: Yearly</li>
+                                <li>Available Server Capacity: 2 GB/ 4 GB</li>
+                            </ul>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+        </div>
+    </div>
+    <div style="padding-left:20px;" class="col-sm-4 side-bar">
+        <div class="col-sm-12">
+            @Html.ActionLink("Register Devices", "RegisterDevices") |
+            @Html.ActionLink("Data View", "Data") |
+            @Html.ActionLink("Account View", "AccountView") |
+            @Html.ActionLink("Register Device", "RegisterDevices") |
+            @Html.ActionLink("Insights", "Insights") |
+            @Html.ActionLink("DeviceManager", "DeviceManager")
+        </div>
+    </div>
+</div>
