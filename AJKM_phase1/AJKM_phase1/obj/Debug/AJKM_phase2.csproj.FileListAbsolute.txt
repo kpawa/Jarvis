@@ -99,3 +99,16 @@ C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\System.Web.Mvc
 C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csprojResolveAssemblyReference.cache
 C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
 C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Owin.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.xml
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.xml
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.Cookies.xml

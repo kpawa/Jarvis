@@ -13,10 +13,10 @@ namespace AJKM_phase1.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class JarvisEntities : DbContext
+    public partial class SecurityEntities : DbContext
     {
-        public JarvisEntities()
-            : base("name=JarvisEntities")
+        public SecurityEntities()
+            : base("name=SecurityEntities")
         {
         }
     
@@ -25,6 +25,11 @@ namespace AJKM_phase1.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Detail> Details { get; set; }
         public virtual DbSet<Device> Devices { get; set; }
