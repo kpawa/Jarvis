@@ -2,25 +2,63 @@
     ViewBag.Title = "Insights";
 }
 
-<div class="col-sm-10">
-    <h2 class="col-sm-12">Insights</h2>
-    <img class="col-sm-12" src="~/images/Pie_Chart.jpg" alt="Devices Power Consumption Pie Chart" width="880" height="303" />
-    <div class="col-sm-12 clearfix">
-        <ul class="col-sm-6" style="list-style-type: none;">
-            <li>Household Electrical Usage is 7% higher than it was at this point last year.</li>
-            <li>Connected Smart Devices account for 34% of total electrical use.</li>
-            <li>Possible Break-in: Front Door was accessed at 2:45 AM Saturday morning.</li>
-            <li>Grocery Delivery of the following items is scheduled to be delivered Wednesday.</li>
-            <li>Smoke Detector 5 failed to initialize on Thursday, December 11, 2015 at 11:16 AM.</li>
-        </ul>
-        <ul class="col-sm-6" style="list-style-type: none;">
-            <li>Security Cameras detected unregistered person Wednesday, December 10. See recording.</li>
-            <li>View Household Television usage patterns</li>
-            <li>View Household Internet Radio usage patterns</li>
-            <li>Solar Panel #2 has produces 18% more electricity this year. View all Solar Panel stats.</li>
-            <li>Morning alarm was set to "on" 251 days so far this year. View Alarm Clock stats.</li>
-            <li>The washing machine has used 2567 litres of water this year</li>
-        </ul>
+<div class="container">
+
+
+    <div class="col-sm-8 page-content">
+
+        <h2 class="col-sm-12">Insights</h2>
+        <img class="col-sm-12" src="~/images/Pie_Chart.jpg" alt="Devices Power Consumption Pie Chart" width="880" height="303" />
+        <div class="col-sm-12 clearfix">
+            <ul class="col-sm-6" style="list-style-type: none;">
+                <li>Household Electrical Usage is 7% higher than it was at this point last year.</li>
+                <li>Connected Smart Devices account for 34% of total electrical use.</li>
+                <li>Possible Break-in: Front Door was accessed at 2:45 AM Saturday morning. <a href="#"> See recording </a></li>
+                <li>Grocery Delivery of the following <a href="#"> items </a> is scheduled to be delivered Wednesday.</li>
+                <li>Smoke Detector 5 failed to initialize on Thursday, December 11, 2015 at 11:16 AM.</li>
+                <li>View Fitbit <a href="#"> Health Monitoring Stats </a>.</li>
+            </ul>
+            <ul class="col-sm-6" style="list-style-type: none;">
+                <li>Security Cameras detected unregistered person Wednesday, December 10. <a href="#"> See recording </a>.</li>
+                <li>View Household <a href="#"> Television usage patterns </a></li>
+                <li>View Household <a href="#"> Internet Radio usage patterns </a></li>
+                <li>Solar Panels have produced 18% more electricity this year. View all <a href="#"> Solar Panel stats </a>.</li>
+                <li>Morning alarm was set to "on" 251 days so far this year. View <a href="#"> Alarm Clock stats </a>.</li>
+                <li>The washing machine has used 2567 litres of water this year. </li>
+                <li><a href="#"> View Efficiency Recommendations. </a> </li>
+            </ul>
+
+        </div>
+
+        </div>
+
+    <div style="padding-left:20px;" class="col-sm-4 side-bar">
+        <h2><a href="@Url.Action("Data", "Accounts")"> Your Devices </a></h2>
+        <div class="col-sm-12">
+            <h3> Lights </h3>
+            <ul>
+                <li><a href="@Url.Action("Data", "Accounts")"> Kitchen </a></li>
+                <li> Dining Room </li>
+                <li> Master Bedroom </li>
+                <li> Living Room </li>
+            </ul>
+            <h3> Heating </h3>
+            <ul>
+                <li> Dining Room Thermostat </li>
+                <li> Living Room Thermostat </li>
+            </ul>
+            <h3> Other </h3>
+            <ul>
+                <li> Coffee Machine </li>
+                <li> Camera </li>
+            </ul>
+            @Html.ActionLink("Register Devices", "RegisterDevices")
+
+            <hr>
+            @Html.ActionLink("Data View", "Data") |
+            @Html.ActionLink("Account View", "AccountView") |
+            @Html.ActionLink("Register Device", "RegisterDevices") |
+            @Html.ActionLink("Insights", "Insights") |
+            @Html.ActionLink("DeviceManager", "DeviceManager")
+        </div>
     </div>
-    
-</div>
