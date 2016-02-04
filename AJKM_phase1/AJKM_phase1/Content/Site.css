@@ -10,9 +10,9 @@
     padding-right: 15px;
 }
 
-.body-content a {	text-decoration: none; color: black; }
-.body-content a:link { color: red; }
-.body-content a:visited { color: black; }
+.body-content a {	text-decoration: none; color: navy; }
+.body-content a:link { color: navy; }
+.body-content a:visited { color: purple; }
 .body-content a:hover { color: green;}
 .body-content a:focus { color: purple; }
 .body-content a:active { color: orange; }
