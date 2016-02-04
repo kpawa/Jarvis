@@ -310,6 +310,8 @@
     <Content Include="Views\Accounts\AddRole.cshtml" />
     <Content Include="Views\Accounts\AddUserToRole.cshtml" />
     <Content Include="Views\Accounts\ConfirmEmail.cshtml" />
+    <Content Include="Views\Accounts\ForgotPassword.cshtml" />
+    <Content Include="Views\Accounts\ResetPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
