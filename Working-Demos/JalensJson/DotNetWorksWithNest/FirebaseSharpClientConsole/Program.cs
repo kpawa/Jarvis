@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace FirebaseSharpClientConsole
 {
@@ -47,28 +48,42 @@ namespace FirebaseSharpClientConsole
 
         private static void SubscribeToNestDeviceDataUpdates()
         {
+            var thermostats = new List<Thermostat>();
+            Thermostat myThermostat = new Thermostat();
             var firebaseClient = new Firebase("https://developer-api.nest.com", _accessToken);
             var response = firebaseClient.GetStreaming("devices",
-                changed: (s, args) => UpdatedItem(args)
-                    /*changed: (s, e) => {
-                        if (e.Path.EndsWith("name"))
+                //changed: (s, args) => UpdatedItem(args)
+                    changed: (s, e) => {
+                       /* if (e.Path.EndsWith("name"))
+                            //myThermostat.name = e.Data;
                             Console.WriteLine("Name: {0}.", e.Data);
                         if (e.Path.Contains("last_connection"))
+                            //myThermostat.last_connection = e.Data;
                             Console.WriteLine("Last connection: {0}.", e.Data);
                         if (e.Path.Contains("ambient_temperature_f"))
+                            //myThermostat.ambient_temperature_f = e.Data;
                             Console.WriteLine("Current temperature: {0}.", e.Data);
                         if (e.Path.Contains("target_temperature_f"))
+                            //myThermostat.target_temperature_f = e.Data;
                             Console.WriteLine("Target temperature: {0}.", e.Data);
                         if (e.Path.Contains("humidity"))
+                            //myThermostat.Humidity = e.Data;
                             Console.WriteLine("Humidity: {0}.", e.Data);
                         if (e.Path.Contains("hvac_state"))
+                            //myThermostat.hvac_state = e.Data;
                             Console.WriteLine("Current mode: {0}.", e.Data);
-                        
-                    }*/
+                        //thermostats.Add(myThermostat);
+                        var JSON = JsonConvert.SerializeObject(e.Data);
+                        //Console.WriteLine(JSON);
+                        */
+                        var JSON = JsonConvert.SerializeObject(e.Data);
+                        Console.WriteLine(JSON);
+                        //Console.WriteLine(e.Path.Remove(0, 54) + "-" + e.Data);
+                    }
         );
-
             Console.WriteLine("Change the current temperature of the Nest Thermostat in the Nest Developer Chrome Extension to see the real-time updates.");
         }
+
 
         public class Thermostat{
             public string name { get; set; }
@@ -84,8 +99,7 @@ namespace FirebaseSharpClientConsole
 
         private static void UpdatedItem(ValueChangedEventArgs args)
         {
-
-            Console.WriteLine(args.Path + ": " + args.OldData + ": " + args.Data);
+                //Console.WriteLine(args.Path.Remove(0, 54) + " - Old data: " + args.OldData + " - New data: " + args.Data);
         }
 
         private static void GetAccessToken()
