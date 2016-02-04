@@ -1,0 +1,29 @@
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\FirebaseSharpClientConsole.exe.config
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\FirebaseSharpClientConsole.exe
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\FirebaseSharpClientConsole.pdb
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\FirebaseSharp.Portable.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Microsoft.Owin.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Microsoft.Owin.Hosting.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Newtonsoft.Json.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Owin.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Net.Http.Extensions.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Net.Http.Formatting.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Net.Http.Primitives.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Web.Http.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Web.Http.Owin.dll
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Microsoft.Owin.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Microsoft.Owin.Hosting.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\Newtonsoft.Json.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Net.Http.Extensions.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Net.Http.Formatting.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Net.Http.Primitives.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Web.Http.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\System.Web.Http.Owin.xml
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\obj\Debug\FirebaseSharpClientConsole.csproj.App.config
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\obj\Debug\FirebaseSharpClientConsole.exe
+d:\data\users\dpadmore\documents\visual studio 2013\Projects\DotNetWorksWithNest\FirebaseSharpClientConsole\obj\Debug\FirebaseSharpClientConsole.pdb
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\OAuth_DEMO\DotNetWorksWithNest\DotNetWorksWithNest\FirebaseSharpClientConsole\bin\Debug\FirebaseSharpClientConsole.exe.config
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\OAuth_DEMO\DotNetWorksWithNest\DotNetWorksWithNest\FirebaseSharpClientConsole\obj\Debug\FirebaseSharpClientConsole.exe
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\OAuth_DEMO\DotNetWorksWithNest\DotNetWorksWithNest\FirebaseSharpClientConsole\obj\Debug\FirebaseSharpClientConsole.pdb
