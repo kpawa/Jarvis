@@ -38,6 +38,44 @@ API
 - Include this addition in your design document online by the end of day 4
 
 GUI/APP UPDATE
-- 
+- Start adding functionality 
+- for features you cannot complete, leave as static pages
+- make it look professional and intuitive
+- data displayed is realistic looking 
+- Use Twitter Bootstrap with a collapsible nav bar
+
+
+AUTHENTICATION/SECURITY
+- Implement the identity model with roles management to direct and restrict different types of users to appropriate areas on your site
+- If you use SQL to create the roles and user tables for application services then include it with your SQL
+- SQL is kept in one file so the entire script can be used to delete and rebuild the database. 
+
+SQL
+- master SQL script in one file that can be executed in one run to clear and rebuild your database without error
+- Keep your master SQL script inside the App_Data folder the most current version is always available to all team members.
+- Insert at least two rows of realistic looking test data in every table
+- DONT HAVE MULTIPLE VERSIONS!
+
+REPOS AND MVM PATTERN
+- Use repository classes and view models to eliminate code redundancy and keep logic out of the controller area
+- no logic in the Models, use repo
+  can have little calculation functions though
+  
+HTML HELPERS, PARTIAL VIEWS, LAYOUT TEMPLATES
+- Remember to use custom HTML helpers and partial views where appropriate
+- PARTIAL VIEWS FOR FORMS, AND ANY REUSEABLE CONTENT
+
+FUNCTIONAL FEATURES
+- need to reflect what we have outlined in out project documentaion USE CASE and ERD Diagrams
+
+CONSUMER
+- Manage account details
+- Register available Smart-Device-Provider accounts
+- Register smart devices to the appropriate SDP account
+- View Device-Data-Report (analysis of user data)
+
+ADMIN
+- manage consumer accounts (SAME FUNCTIONALITY)
+- Create and Add Smart-DEvice Providers
   
 
