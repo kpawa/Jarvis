@@ -6,7 +6,7 @@ HOSTING SITE
 - create a database
 - create a sub-domain
 NOTE: need to have a link to our project documentation
-<a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view?usp=sharing">Phase 1 Doc</a> <br />
+<a href="https://docs.google.com/document/d/1BG0bNsRnXf0A33e9JqfzS1bX-fSvMgQm82LkPoSp6oU/edit">Phase 1 Doc</a> <br />
 <a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view"> Phase 2 Doc</a>
 
 
