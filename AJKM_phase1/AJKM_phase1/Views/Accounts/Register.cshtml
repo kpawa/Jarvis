@@ -1,11 +1,11 @@
-﻿@model AJKM_phase1.ViewModels.Login
+﻿@model AJKM_phase1.ViewModels.RegisteredUser
 
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Log in</h2>
+<h2>Register</h2>
 
 
 @using (Html.BeginForm()) 
@@ -24,6 +24,14 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
@@ -32,15 +40,24 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Log in" class="btn btn-default" />
+                <input type="submit" value="Register" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    Not a member? @Html.ActionLink("Join", "Register", "Accounts") us today!
+    @Html.Raw(@ViewBag.AccountCreated)<br />
+    Click @Html.ActionLink("HERE", "Login", "Accounts") to log in.
 </div>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
