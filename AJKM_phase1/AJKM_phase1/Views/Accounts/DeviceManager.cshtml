@@ -6,50 +6,64 @@
 <!-- maybe no longer necessary, seems to be an option on the side bar of dashboard -->
 <div class="container-fluid">
     <br />
-    <p>December 11, 2015</p>
-    <div class="row">
-        <!-- COLUMN ONE -->
-        <div class="col-sm-4 col-md-4" style="background-color:	white;">
-            <h1>Device Manager</h1>
-            <p>Devices Currently Registered: 75</p>
-            <p>Devices Currently Online: 75</p>
-            <p>Lights: 24</p>
-            <p>Coffee Machines: 1</p>
-            <p>Refrigerators: 2</p>
-            <p>Thermostats: 7</p>
-            <p>Smoke Detectors: 6</p>
-            <p>Security Cameras: 4</p>
-            <p>Door Locks: </p>
-            <p>Televisions: 3</p>
-            <p>Cellphones: </p>
-            <p>Routers: </p>
-            <p>Garage Doors: </p>
-            <p>Toaster Ovens: </p>
-            <p>Vaccum Cleaners</p>
-            <p>Landline Telephones: <p>
-            <p>Washing Machine</p>
-            <p>Ranges: 1</p>
-            <p>Key Locators</p>
-            <p>Health Monitors - Watches: </p>
-            <p>Wall-mount Clocks</p>
-            <p>Stereo Speakers: </p>
-            <p>Drones: </p>
-            <p>Personal Computers: </p>
-            <p>Connected Outlets: </p>
-            <p>Tesla Model S</p>
-            <br />
-        </div>
+    <p>@DateTime.Now.ToString("F")</p>
 
-        <!-- COLUMN TWO -->
-        <div class="col-sm-4 col-md-4">
-            <h2>Find a Device</h2>
-            <p>Find device by location</p>
-            <p>Find device by function</p>
-            <p>Add new device</p>
-        </div>
-        <!-- COLUMN THREE -->
-        <div class="col-sm-4 col-md-4" style="background-color: white;">
-            <img src="~/images/floor_plan.png" alt="Floor Plan with Wi-Fi Connections" width="498" height="499" />
-        </div>
+<div class="col-sm-8 page-content">
+    <!-- COLUMN ONE -->
+    <div class="col-sm-4" style="background-color: white;">
+        <h1>Device Manager</h1>
+        <p>Devices Currently Registered: 75</p>
+        <p>Devices Currently Online: 75</p>
+        <p>Lights: 24</p>
+        <p>Coffee Machines: 1</p>
+        <p>Refrigerators: 2</p>
+        <p>Thermostats: 7</p>
+        <p>Smoke Detectors: 6</p>
+        <p>Security Cameras: 4</p>
+        <p>Door Locks: </p>
+        <p>Televisions: 3</p>
+        <p>Cellphones: </p>
+        <p>Routers: </p>
+        <p>Garage Doors: </p>
+        <p>Toaster Ovens: </p>
+        <p>Vaccum Cleaners</p>
+        <p>Landline Telephones: <p>
+        <p>Washing Machine</p>
+        <p>Ranges: 1</p>
+        <p>Key Locators</p>
+        <p>Health Monitors - Watches: </p>
+        <p>Wall-mount Clocks</p>
+        <p>Stereo Speakers: </p>
+        <p>Drones: </p>
+        <p>Personal Computers: </p>
+        <p>Connected Outlets: </p>
+        <p>Tesla Model S</p>
+        <br />
     </div>
+    <!-- COLUMN TWO -->
+    <div class="col-sm-4" style="background-color: white;">
+        <h2>Find a Device</h2>
+        <p>Find device by location</p>
+        <p>Find device by function</p>
+        <p>Add new device</p>
+        <img src="~/images/floor_plan.png" alt="Floor Plan with Wi-Fi Connections" width="250" />
+    </div>
+
+</div>
+    <!-- COLUMN THREE -->
+
+        <div style="padding-left:20px;" class="col-sm-4 side-bar">
+            <div class="col-sm-12">
+
+                <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Data View", "Data")</button>
+                <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Account View", "AccountView")</button>
+                <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Register Device", "RegisterDevices")</button>
+                <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Insights", "Insights")</button>
+                <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("DeviceManager", "DeviceManager")</button>
+            </div>
+    </div>
+
+
+
+
 </div>

@@ -5,13 +5,13 @@
 }
 
 <div class="container">
-
+    <p>@DateTime.Now.ToString("F")</p>
     <div class="col-sm-8 page-content">
         <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
         <div>
 
             <div>
-                <table>
+                <table class="table table-condensed table-responsive">
                     <tr>
                         <th style="width: 200px;">User Name</th>
                         <th style="width: 200px;">First</th>

@@ -6,12 +6,12 @@
 
 
 <div class="container">
-
+    <p>@DateTime.Now.ToString("F")</p>
     <div class="col-sm-8 page-content">
         <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
         <div>
             <div>
-                <table>
+                <table class="table table-condensed table-responsive">
                     <tr>
                         <td>
                             <h3>Profile <a href="#"> Edit </a></h3>
@@ -50,20 +50,18 @@
                             </ul>
                         </td>
                     </tr>
-
-            </table>
+                </table>
         </div>
         </div>
     </div>
     <div style="padding-left:20px;" class="col-sm-4 side-bar">
         <div class="col-sm-12">
             <hr>
-            @Html.ActionLink("Register Devices", "RegisterDevices") |
-            @Html.ActionLink("Data View", "Data") |
-            @Html.ActionLink("Account View", "AccountView") |
-            @Html.ActionLink("Register Device", "RegisterDevices") |
-            @Html.ActionLink("Insights", "Insights") |
-            @Html.ActionLink("DeviceManager", "DeviceManager")
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Data View", "Data")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Account View", "AccountView")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Register Device", "RegisterDevices")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Insights", "Insights")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("DeviceManager", "DeviceManager")</button>
         </div>
     </div>
 </div>
