@@ -112,3 +112,7 @@ C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin
 C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.xml
 C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\A00867806\Desktop\Local Repo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.OAuth.xml
