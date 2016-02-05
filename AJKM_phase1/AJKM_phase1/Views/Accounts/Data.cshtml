@@ -4,6 +4,7 @@
 
 <div class=" col-sm-8 clearfix page-content">
     <div class="row col-sm-12">
+        <p>@DateTime.Now.ToString("F")</p>
         <h1 class="col-sm-6" style="text-decoration: underline;">Your Devices </h1>
     </div>
     <div class="row col-sm-12">
@@ -45,10 +46,17 @@
         </div>
     </div>
 </div>
+
 <div class="col-sm-4 side-bar">
     <div class="row col-sm-12">
-        <!-- COLUMN ONE -->
         <div class="col-sm-12">
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("ConsumerDashboard", "ConsumerDashboard")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Data View", "Data")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Account View", "AccountView")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Register Device", "RegisterDevices")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Insights", "Insights")</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("DeviceManager", "DeviceManager")</button>
+
             <h2>Total Consumption</h2>
             <p>Electricity Consumption (2015): 480 KW/h</p>
             <p>Water Consumption (2015): 1660L</p>
@@ -62,11 +70,7 @@
         </div>
         
         <hr>
-        @Html.ActionLink("Data View", "Data") |
-        @Html.ActionLink("Account View", "AccountView") |
-        @Html.ActionLink("Register Device", "RegisterDevices") |
-        @Html.ActionLink("Insights", "Insights") |
-        @Html.ActionLink("DeviceManager", "DeviceManager")
+
 
     </div>
 </div>

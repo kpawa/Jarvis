@@ -7,7 +7,6 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
-    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -15,6 +14,7 @@
             <img class="pull-left logo" src="~/images/logov1.png">
         </a>
         <div class="container">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -25,24 +25,49 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            User Role Dashboards <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="@Url.Action("ConsumerDashboard", "Accounts")">Consumer</a></li>
-                            <li><a href="@Url.Action("AdminDashBoard", "Accounts")">Admin</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="@Url.Action("Data", "Accounts")">Data</a></li>
-                    <li><a href="@Url.Action("Insights", "Accounts")">Insights</a></li>
+                    @{
+                        if (Request.IsAuthenticated && User.IsInRole("admin"))
+                        {
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    User Role Dashboards <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("AdminDashBoard", "Accounts")">Admin Dashboard</a></li>
+                                    <li><a href="@Url.Action("ConsumerDashboard", "Accounts")">Member Dashboard</a></li>
+                                </ul>
+                            </li>
+                        }
+                        else if (Request.IsAuthenticated && User.IsInRole("member"))
+                        {
+                            <li><a href="@Url.Action("ConsumerDashboard", "Accounts")">Dashboard</a></li>
+                        }
+                    }
+                    
+                    @{
+                        if (Request.IsAuthenticated)
+                        {
+                            <li><a href="@Url.Action("Data", "Accounts")">Data</a></li>
+                            <li><a href="@Url.Action("Insights", "Accounts")">Insights</a></li>
+                        }
+                    }
                     <li><a href="@Url.Action("About", "Home")">About</a></li>
                     <li><a href="@Url.Action("Support", "Home")">Support</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view?usp=sharing" target="_blank">Phase-2 Doc</a></li>
-                    <li><a href="@Url.Action("LoginSignUp", "Accounts")">Log in / Sign up</a></li>
-
+                    <li><a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view?usp=sharing" target="_blank">Phase-2 Doc</a></li>                 
+                    @{
+                        if (!Request.IsAuthenticated)
+                        {
+                            <li><a href="@Url.Action("Login", "Accounts")">Log in</a></li>
+                            <li><a href="@Url.Action("Register", "Accounts")">Register</a></li>
+                        }
+                        else if (Request.IsAuthenticated)
+                        {
+                            <li><a href="#">Hello, @Html.Raw(User.Identity.Name)</a></li>
+                            <li><a href="@Url.Action("Logout", "Accounts")">Log out</a></li>
+                        }
+                    }
                 </ul>
             </div>
         </div>

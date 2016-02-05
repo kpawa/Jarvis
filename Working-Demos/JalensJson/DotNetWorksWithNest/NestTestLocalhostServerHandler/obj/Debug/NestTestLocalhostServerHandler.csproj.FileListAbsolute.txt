@@ -1,0 +1,2 @@
+G:\Jalen\JalenBCIT\Project Phase 2\DotNetWorksWithNest\DotNetWorksWithNest\NestTestLocalhostServerHandler\obj\Debug\NestTestLocalhostServerHandler.csproj.App.config
+G:\Jalen\JalenBCIT\Project Phase 2\DotNetWorksWithNest\DotNetWorksWithNest\NestTestLocalhostServerHandler\obj\Debug\NestTestLocalhostServerHandler.csprojResolveAssemblyReference.cache
