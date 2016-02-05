@@ -11,11 +11,11 @@
 }
 
 .body-content a {	text-decoration: none; color: navy; }
-.body-content a:link { color: navy; }
-.body-content a:visited { color: purple; }
-.body-content a:hover { color: green;}
-.body-content a:focus { color: purple; }
-.body-content a:active { color: orange; }
+.body-content a:link { text-decoration: none; color: navy; }
+.body-content a:visited { text-decoration: none; color: purple; }
+.body-content a:hover { text-decoration: none; color: red;}
+.body-content a:focus { text-decoration: none; color: purple; }
+.body-content a:active { text-decoration: none; color: royalblue; }
 
     /*color: inherit;*/
 }
@@ -127,5 +127,9 @@ legend.fieldset-border {
     margin-top: 70px;	
     float:right;
     z-index: 2;
-
 }
+
+
+tr:nth-child(even) {background: #A9E2F3}
+tr:nth-child(odd) {background: #FFFFFF}
+
