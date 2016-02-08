@@ -11,6 +11,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using NestTest.ViewModels;
+using NestTest.Controllers;
 
 namespace NestTest.Controllers
 {
@@ -20,13 +21,20 @@ namespace NestTest.Controllers
         // this will send the request to REST api
         public ActionResult Index(List<Thermostat> data)
         {
-           var authorizationUrl = string.Format("https://home.nest.com/login/oauth2?client_id={0}&state={1}",
-                ConfigurationManager.AppSettings["client-id"], "dummy-random-value-for-anti-csfr");
+            //var authorizationUrl = string.Format("https://home.nest.com/login/oauth2?client_id={0}&state={1}",
+            //     ConfigurationManager.AppSettings["client-id"], "dummy-random-value-for-anti-csfr");
 
-            using (var process = Process.Start(authorizationUrl))
-            {
-                Console.WriteLine("Awaiting response, please accept on the Works with Nest page to continue");
-            }
+            // using (var process = Process.Start(authorizationUrl))
+            // {
+            //     Console.WriteLine("Awaiting response, please accept on the Works with Nest page to continue");
+            // }
+            NestController nest = new NestController();
+            nest.Register();
+
+            var accessToken = System.Web.HttpContext.Current.Request.Cookies["accessToken"].Value;
+
+            ViewBag.AccessToken = accessToken;
+
             return View();
         }
 
@@ -45,11 +53,12 @@ namespace NestTest.Controllers
             if (!string.Equals("dummy-random-value-for-anti-csfr", state))
             {
                 throw new HttpResponseException(HttpStatusCode.BadRequest);
-            }               
+            }
             // this creates an access token we can use to get data, may want to cache this 
-            var accessToken = GetAccessToken(code);
+            //var accessToken = GetAccessToken(code);
+            var accessToken = "c.EvTrrKWjwCoxrxDVaQrWI4siSt3FKMNEyCVx2PvnLvQQO6pHvWTytPvIRbKPM0MICFAFCddGWOFtzlFGy8UQ09K8O8p3LQ0SAObzAh2UHLHGKx97QEPZpasLCGVitKyxo2u3uCwhDuhnjYLR";
             // this will generate JSON for a particular item
-            var JSON = await GetJSON(accessToken);
+            dynamic JSON = await GetJSON(accessToken);
             return JSON; // spits out JSON WE CAN USE
         }
 
