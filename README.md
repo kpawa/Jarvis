@@ -1,4 +1,14 @@
 # Project-Phase-1
+
+DB ACCOUNT LOGINS
+matt  - 12345678
+kully - 12345678
+jalen - 12345678
+andrewhui - 12345678
+
+FTP ACCOUNT
+jarvis - 12345678
+
 TASK LIST
 - organized based on category
 

@@ -60,7 +60,7 @@
     </div>
 </div>
 <div style="padding-left:20px;"class="col-sm-4 side-bar">
-    <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("ConsumerDashboard", "ConsumerDashboard")</button>
+    @Html.ActionLink("ConsumerDashboard", "ConsumerDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
     <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("DeviceManager", "DeviceManager")</button>
     <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Data View", "Data")</button>
     <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Account View", "AccountView")</button>
