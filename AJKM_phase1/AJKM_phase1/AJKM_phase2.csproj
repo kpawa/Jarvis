@@ -182,27 +182,31 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Models\JarvisSecurityModel.edmx">
+    <EntityDeploy Include="Models\SecurityEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>JarvisSecurityModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>SecurityEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\JarvisSecurityModel.edmx.diagram">
-      <DependentUpon>JarvisSecurityModel.edmx</DependentUpon>
+    <Content Include="Models\SecurityEntities.edmx.diagram">
+      <DependentUpon>SecurityEntities.edmx</DependentUpon>
     </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
-    <Content Include="Models\JarvisSecurityModel.Context.tt">
+    <Content Include="Models\SecurityEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>JarvisSecurityModel.edmx</DependentUpon>
-      <LastGenOutput>JarvisSecurityModel.Context.cs</LastGenOutput>
+      <DependentUpon>SecurityEntities.edmx</DependentUpon>
+      <LastGenOutput>SecurityEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\JarvisSecurityModel.tt">
+    <Content Include="Models\SecurityEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>JarvisSecurityModel.edmx</DependentUpon>
-      <LastGenOutput>JarvisSecurityModel.cs</LastGenOutput>
+      <DependentUpon>SecurityEntities.edmx</DependentUpon>
+      <LastGenOutput>SecurityEntities.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -225,53 +229,57 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetRole.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUser.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserClaim.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AspNetUserLogin.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Detail.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Device.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DeviceData.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JarvisSecurityModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JarvisSecurityModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JarvisSecurityModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\JarvisSecurityModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JarvisSecurityModel.edmx</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ProviderAccount.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StoredData.cs">
-      <DependentUpon>JarvisSecurityModel.tt</DependentUpon>
+    <Compile Include="Models\SecurityEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityEntities.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SecurityEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SecurityEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>SecurityEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserAccountVMRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -281,6 +289,7 @@
     <Compile Include="Startup1.cs" />
     <Compile Include="ViewModels\Login.cs" />
     <Compile Include="ViewModels\RegisteredUser.cs" />
+    <Compile Include="ViewModels\UserAccountVM.cs" />
     <Compile Include="ViewModels\UserRole.cs" />
   </ItemGroup>
   <ItemGroup>

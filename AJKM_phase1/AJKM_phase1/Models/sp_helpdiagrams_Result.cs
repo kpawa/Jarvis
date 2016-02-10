@@ -10,14 +10,13 @@
 namespace AJKM_phase1.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class StoredData
+    public partial class sp_helpdiagrams_Result
     {
-        public int deviceID { get; set; }
-        public string state { get; set; }
-        public Nullable<System.DateTime> datetime { get; set; }
-    
-        public virtual Device Device { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

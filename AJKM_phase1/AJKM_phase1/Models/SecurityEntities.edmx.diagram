@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ce32dc1a4cda49a78743b8b3851fe74a" Name="Diagram1">
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetRole" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetUser" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.Account" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.Device" Width="1.5" PointX="9.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.DeviceData" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.ProviderAccount" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <AssociationConnector Association="Jarvis2SecurityModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Jarvis2SecurityModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Jarvis2SecurityModel.FK__Account__account__1A9EF37A" ManuallyRouted="false" />
+        <AssociationConnector Association="Jarvis2SecurityModel.FK__ProviderA__accou__13F1F5EB" ManuallyRouted="false" />
+        <AssociationConnector Association="Jarvis2SecurityModel.FK__Device__18B6AB08" ManuallyRouted="false" />
+        <AssociationConnector Association="Jarvis2SecurityModel.FK__Device__dataID__19AACF41" ManuallyRouted="false" />
+        <AssociationConnector Association="Jarvis2SecurityModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -26,8 +26,8 @@ namespace AJKM_phase1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=brown.mysitehosted.com;Initial Catalog=Jarvis;User ID=andrewhui;Passw" +
-            "ord=12345678")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=brown.mysitehosted.com;Initial Catalog=Jarvis_2.0;User ID=andrewhui;P" +
+            "assword=12345678")]
         public string Setting {
             get {
                 return ((string)(this["Setting"]));
