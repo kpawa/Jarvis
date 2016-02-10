@@ -10,6 +10,9 @@
 @Html.ActionLink("Get Thermostats Data", "GetThermostatData", "Nest", new { accessToken = ViewBag.AccessToken }, null) <br />
 @Html.ActionLink("Get Camera Data", "GetCameraData", "Nest", new { accessToken = ViewBag.AccessToken }, null) <br />
 @Html.ActionLink("Get Smoke Alarm Data", "GetSmokeAlarmData", "Nest", new { accessToken = ViewBag.AccessToken }, null) <br />
+@Html.ActionLink("Get Themostat Temp", "GetThermoStatTemp", "Nest", new { accessToken = ViewBag.AccessToken, id = "is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq"  }, null) <br />
+@Html.ActionLink("Set Themostat Temp", "SetThermostatTemp", "Nest", new { accessToken = ViewBag.AccessToken, id = "is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq", temp = 99.9f }, null) <br />
+@Html.ActionLink("Set Themostat Name", "SetThermostatName", "Nest", new { accessToken = ViewBag.AccessToken, id = "is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq" }, null) <br />
 
 
 
