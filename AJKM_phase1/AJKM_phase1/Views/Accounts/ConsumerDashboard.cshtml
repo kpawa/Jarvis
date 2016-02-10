@@ -9,7 +9,10 @@
     <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
     <img style="width: 100%;" src="~/images/energy.PNG"/>
     <div>
+        @{ 
 
+            @Html.Raw(ViewBag.thermostat.ToString())
+        }
         <div>
             <table class="table table-condensed table-responsive">
                 <tr>

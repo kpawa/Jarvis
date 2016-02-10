@@ -10,7 +10,7 @@ namespace AJKM_phase1.Models
 {
     public class ThermostatRepo
     {
-        const string ACCESS_TOKEN = "c.gfUxq6YcnYOwVJ5yO1OaxfjWRZ7PDphyWXLfx6S7AqVMtPNNifIAY5SCn8d3C9Gw6ch7HsdJGBE6g7uSx1B2LSKidx67y3GDbmkzXCIvE0sZC7UK9AE29a34InT1KHNz2XN8aEKAeNYELvS0";
+        const string ACCESS_TOKEN = "c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49";
         public async Task<Thermostat> GetThermostat()
         {
             var url = "https://developer-api.nest.com";

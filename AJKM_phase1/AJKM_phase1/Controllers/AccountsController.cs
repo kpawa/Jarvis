@@ -10,6 +10,7 @@ using System.Security.Claims;
 using System.Web;
 using System.Web.Http.Cors;
 using System.Web.Mvc;
+using System.Threading.Tasks;
 
 namespace AJKM_phase1.Controllers
 {
@@ -285,8 +286,11 @@ namespace AJKM_phase1.Controllers
         /* ================= */
         /* ===== PAGES ===== */
         /* ================= */
-        public ActionResult ConsumerDashboard()
+        public async Task<ActionResult> ConsumerDashboard()
         {
+            ThermostatRepo repo = new ThermostatRepo();
+            var t = await repo.GetThermostat();
+            ViewBag.thermostat = t;
             return View();
         }
         public ActionResult AccountView()
