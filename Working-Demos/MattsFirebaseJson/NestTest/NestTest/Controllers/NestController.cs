@@ -125,7 +125,7 @@ namespace NestTest.Controllers
             }
         }
 
-        public async Task<JsonResult> GetDeviceData(string accessToken)
+        public async Task<string> GetDeviceData(string accessToken)
         {
             // CREATE A CLIENT WE CAN ACCESS DATA THROUGH
             var url = "https://developer-api.nest.com";
@@ -133,8 +133,18 @@ namespace NestTest.Controllers
 
             
             dynamic devices = await fb.GetAsync("devices");
-            
-            return Json(devices, JsonRequestBehavior.AllowGet);
+
+            var jsonParsed = JsonConvert.DeserializeObject<dynamic>(devices);
+            var thermostats = jsonParsed.thermostats;
+            string dev_id = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].device_id;
+            string name = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].name_long;
+            string curr_temp = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].ambient_temperature_c;
+            string tar_temp = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].target_temperature_c;
+            Thermostat myThermostat = new Thermostat(dev_id, name, curr_temp, tar_temp);
+
+            //return Json(devices, JsonRequestBehavior.AllowGet);
+            return myThermostat.ToString();
+
         }
 
         public async Task<JsonResult> GetThermostatData(string accessToken)
@@ -143,6 +153,12 @@ namespace NestTest.Controllers
             var fb = new Firebase(url, accessToken);
 
             dynamic devices = await fb.GetAsync("devices/thermostats");
+
+            var jsonParsed = JsonConvert.DeserializeObject<dynamic>(devices);
+            string name = jsonParsed["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].name_long;
+            string temp = jsonParsed["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].ambient_temperature_f;
+            Thermostat myThermostat = new Thermostat(name, temp);
+
             return Json(devices, JsonRequestBehavior.AllowGet);
         }
 

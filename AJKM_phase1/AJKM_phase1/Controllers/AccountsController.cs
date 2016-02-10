@@ -317,5 +317,9 @@ namespace AJKM_phase1.Controllers
         {
             return View();
         }
+        public ActionResult SignUp()
+        {
+            return View();
+        }
     }
 }

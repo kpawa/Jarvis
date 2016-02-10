@@ -33,35 +33,9 @@
         </div>
 
     <div style="padding-left:20px;" class="col-sm-4 side-bar">
-        <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("ConsumerDashboard", "ConsumerDashboard")</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Data View", "Data")</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Account View", "AccountView")</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Register Device", "RegisterDevices")</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Insights", "Insights")</button>
-        <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("DeviceManager", "DeviceManager")</button>
-
-        <h2><a href="@Url.Action("Data", "Accounts")"> Your Devices </a></h2>
-        <div class="col-sm-12">
-            <h3> Lights </h3>
-            <ul>
-                <li> Kitchen </li>
-                <li> Dining Room </li>
-                <li> Master Bedroom </li>
-                <li> Living Room </li>
-            </ul>
-            <h3> Heating </h3>
-            <ul>
-                <li> Dining Room Thermostat </li>
-                <li> Living Room Thermostat </li>
-            </ul>
-            <h3> Other </h3>
-            <ul>
-                <li> Coffee Machine </li>
-                <li> Camera </li>
-            </ul>
-            @Html.ActionLink("Register Devices", "RegisterDevices")
-
-            <hr>
-
+        @Html.ActionLink("Dashboard", "ConsumerDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
+        @Html.ActionLink("Account", "AccountView", null, new { @class = "btn btn-default btn-lg btn-block" })
+        @Html.ActionLink("Connected Devices", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
+        @Html.ActionLink("Insights", "Insights", null, new { @class = "btn btn-default btn-lg btn-block" })
         </div>
     </div>
