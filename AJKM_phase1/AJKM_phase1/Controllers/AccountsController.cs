@@ -96,6 +96,8 @@ namespace AJKM_phase1.Controllers
             {
                 CreateTokenProvider(manager, EMAIL_CONFIRMATION);
 
+                // identityUser.Id use this to create an entry in our accounts table 
+
                 var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
                 var callbackUrl = Url.Action("ConfirmEmail", "Accounts",
                                                 new { userId = identityUser.Id, code = code },
@@ -103,6 +105,8 @@ namespace AJKM_phase1.Controllers
 
                 string email = "Please confirm your account by clicking this link: <a href=\""
                                 + callbackUrl + "\">Confirm Registration</a>";
+
+                
                 ViewBag.FakeConfirmation = email;
             }
             return View();

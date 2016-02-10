@@ -163,5 +163,51 @@ namespace NestTest.Controllers
             dynamic devices = await fb.GetAsync("devices/smoke_co_alarms");
             return Json(devices, JsonRequestBehavior.AllowGet);
         }
+
+        public async Task<JsonResult> GetThermoStatTemp(string accessToken, string id )
+        {
+            var url = "https://developer-api.nest.com";
+            var fb = new Firebase(url, accessToken);
+
+            dynamic devices = await fb.GetAsync("devices/thermostats/" + id );
+            return Json(devices, JsonRequestBehavior.AllowGet);
+        }
+
+        public async Task<JsonResult> SetThermostatTemp(string accessToken, string id, float temp)
+        {
+            // ambient_temperature_c
+            var url = "https://developer-api.nest.com";
+            var fb = new Firebase(url, accessToken);
+            /*
+
+    string path = "/path";
+string data = "{{\"value\": \"Hello!\"}}";
+ 
+string id = fb.Post(path, data);
+
+*/
+            string data = "{{\"ambient_tempeture_c\" : \"" + temp + "\"}}";
+            dynamic JSON = await fb.PostAsync("devices/thermostats/" + id , data);
+            return Json(JSON, JsonRequestBehavior.AllowGet);
+
+        }
+        public void SetThermostatName(string accessToken, string id)
+        {
+            // ambient_temperature_c
+            var url = "https://developer-api.nest.com";
+            var fb = new Firebase(url, accessToken);
+            /*
+
+    string path = "/path";
+string data = "{{\"value\": \"Hello!\"}}";
+ 
+string id = fb.Post(path, data);
+
+*/
+            string data = "{{\"value\" : \"Jim\"}}";
+            fb.PostAsync("devices/thermostats/" + id + "/name_long", data);
+
+        }
+
     }
 }

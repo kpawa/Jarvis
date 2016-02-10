@@ -167,3 +167,20 @@ C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.We
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csprojResolveAssemblyReference.cache
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Owin.dll
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.xml
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.xml
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Matt Catellier\Dropbox\BCIT\MyCourses\InternalProject\phase2\JarvisRepo\AJKM_phase1\AJKM_phase1\bin\Microsoft.Owin.Security.OAuth.xml
