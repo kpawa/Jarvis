@@ -67,7 +67,8 @@ namespace AJKM_phase1.Controllers
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
                     }
-                    else if (User.IsInRole("admin")){
+                    else if (User.IsInRole("admin"))
+                    {
 
                         return RedirectToAction("AdminDashBoard", "Accounts");
                     }
@@ -83,7 +84,7 @@ namespace AJKM_phase1.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(RegisteredUser newUser)
+        public ActionResult Register(UserAccountVM newUser)
         {
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore)
@@ -95,14 +96,18 @@ namespace AJKM_phase1.Controllers
 
             var identityUser = new IdentityUser()
             {
-                UserName = newUser.UserName,
+                UserName = newUser.Username,
                 Email = newUser.Email
             };
             IdentityResult result = manager.Create(identityUser, newUser.Password);
 
+            
+
             if (result.Succeeded)
             {
                 CreateTokenProvider(manager, EMAIL_CONFIRMATION);
+
+                // identityUser.Id use this to create an entry in our accounts table 
 
                 var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
                 var callbackUrl = Url.Action("ConfirmEmail", "Accounts",
@@ -111,7 +116,12 @@ namespace AJKM_phase1.Controllers
 
                 string email = "Please confirm your account by clicking this link: <a href=\""
                                 + callbackUrl + "\">Confirm Registration</a>";
+
+                
                 ViewBag.FakeConfirmation = email;
+
+                UserAccountVMRepo uaRepo = new UserAccountVMRepo();
+                uaRepo.CreateAccount(newUser.FirstName, newUser.LastName, identityUser.Id);
             }
             return View();
         }
@@ -141,7 +151,7 @@ namespace AJKM_phase1.Controllers
                 return false;
 
             // Validated user was locked out but now can be reset.
-            if (userManager.CheckPassword(user, login.Password)&& userManager.IsEmailConfirmed(user.Id))
+            if (userManager.CheckPassword(user, login.Password) && userManager.IsEmailConfirmed(user.Id))
 
             {
                 if (userManager.SupportsUserLockout

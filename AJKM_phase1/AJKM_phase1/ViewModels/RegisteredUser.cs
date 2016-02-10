@@ -8,6 +8,7 @@ namespace AJKM_phase1.ViewModels
 {
     public class RegisteredUser
     {
+        // add 2 more properties here
         [Required]
         [Display(Name = "User name")]
         public string UserName { get; set; }
