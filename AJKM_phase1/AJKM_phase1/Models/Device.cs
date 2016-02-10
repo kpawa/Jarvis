@@ -16,11 +16,11 @@ namespace AJKM_phase1.Models
     {
         public int deviceID { get; set; }
         public string category { get; set; }
-        public int accountID { get; set; }
-        public int dataID { get; set; }
+        public string username { get; set; }
+        public string accountID { get; set; }
+        public Nullable<int> dataID { get; set; }
     
-        public virtual Account Account { get; set; }
+        public virtual ProviderAccount ProviderAccount { get; set; }
         public virtual DeviceData DeviceData { get; set; }
-        public virtual StoredData StoredData { get; set; }
     }
 }

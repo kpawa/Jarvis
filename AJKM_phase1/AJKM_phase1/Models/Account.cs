@@ -17,20 +17,15 @@ namespace AJKM_phase1.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Account()
         {
-            this.Devices = new HashSet<Device>();
+            this.ProviderAccounts = new HashSet<ProviderAccount>();
         }
     
-        public int accountID { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
+        public string accountID { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
-        public System.DateTime birthdate { get; set; }
-        public string type { get; set; }
     
-        public virtual Detail Detail { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Device> Devices { get; set; }
-        public virtual ProviderAccount ProviderAccount { get; set; }
+        public virtual ICollection<ProviderAccount> ProviderAccounts { get; set; }
     }
 }
