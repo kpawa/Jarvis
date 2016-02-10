@@ -47,7 +47,7 @@ namespace AJKM_phase1.Controllers
 
             if (ModelState.IsValid)
             {
-                if (ValidLogin(login))
+                if (identityUser != null)
                 {
                     IAuthenticationManager authenticationManager
                                            = HttpContext.GetOwinContext().Authentication;
@@ -63,7 +63,7 @@ namespace AJKM_phase1.Controllers
                     {
                         IsPersistent = false
                     }, identity);
-                    if (User.IsInRole("member"))
+                    if (User.IsInRole("consumer"))
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
                     }
@@ -72,7 +72,6 @@ namespace AJKM_phase1.Controllers
 
                         return RedirectToAction("AdminDashBoard", "Accounts");
                     }
-                    //return RedirectToAction("Index", "Home");
                 }
             }
             return View();
@@ -99,9 +98,9 @@ namespace AJKM_phase1.Controllers
                 UserName = newUser.Username,
                 Email = newUser.Email
             };
-            IdentityResult result = manager.Create(identityUser, newUser.Password);
 
-            
+            // this threw an error, but it also worked so what gives???
+            IdentityResult result = manager.Create(identityUser, newUser.Password);  
 
             if (result.Succeeded)
             {
@@ -122,6 +121,16 @@ namespace AJKM_phase1.Controllers
 
                 UserAccountVMRepo uaRepo = new UserAccountVMRepo();
                 uaRepo.CreateAccount(newUser.FirstName, newUser.LastName, identityUser.Id);
+
+                // CREATE WITH CONSUMER ROLE BY DEFAULT
+                SecurityEntities context = new SecurityEntities();
+                AspNetUser user = context.AspNetUsers
+                                 .Where(u => u.UserName == newUser.Username).FirstOrDefault();
+                AspNetRole role = context.AspNetRoles
+                                 .Where(r => r.Name == "consumer").FirstOrDefault();
+
+                user.AspNetRoles.Add(role);
+                context.SaveChanges();
             }
             return View();
         }

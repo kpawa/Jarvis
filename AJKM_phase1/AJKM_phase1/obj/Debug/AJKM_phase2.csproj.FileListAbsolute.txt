@@ -275,9 +275,3 @@ G:\Jalen\JalenBCIT\Project Phase 2\Jarvis-Repo\AJKM_phase1\AJKM_phase1\bin\Syste
 G:\Jalen\JalenBCIT\Project Phase 2\Jarvis-Repo\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Extensions.xml
 G:\Jalen\JalenBCIT\Project Phase 2\Jarvis-Repo\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.xml
 G:\Jalen\JalenBCIT\Project Phase 2\Jarvis-Repo\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csproj.App.config
-C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\FirebaseSharp.Portable.dll
-C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Extensions.dll
-C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.dll
-C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Extensions.xml
-C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.xml
-C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csproj.App.config
