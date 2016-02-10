@@ -269,3 +269,9 @@ C:\Users\A00867806\Desktop\local\AJKM_phase1\AJKM_phase1\bin\System.Web.Razor.xm
 C:\Users\A00867806\Desktop\local\AJKM_phase1\AJKM_phase1\bin\System.Web.WebPages.xml
 C:\Users\A00867806\Desktop\local\AJKM_phase1\AJKM_phase1\bin\System.Web.WebPages.Deployment.xml
 C:\Users\A00867806\Desktop\local\AJKM_phase1\AJKM_phase1\bin\System.Web.WebPages.Razor.xml
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\FirebaseSharp.Portable.dll
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Extensions.dll
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.dll
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Extensions.xml
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.xml
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csproj.App.config
