@@ -63,7 +63,15 @@ namespace AJKM_phase1.Controllers
                     {
                         IsPersistent = false
                     }, identity);
-                    return RedirectToAction("Index", "Home");
+                    if (User.IsInRole("member"))
+                    {
+                        return RedirectToAction("ConsumerDashboard", "Accounts");
+                    }
+                    else if (User.IsInRole("admin")){
+
+                        return RedirectToAction("AdminDashBoard", "Accounts");
+                    }
+                    //return RedirectToAction("Index", "Home");
                 }
             }
             return View();
