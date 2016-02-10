@@ -32,6 +32,8 @@ namespace NestTest.ViewModels
             this.Target_Temperature = tar_temp;
             this.Name_Long = name;
         }
-
+        public override string ToString() {
+            return "Device Id: " + this.Device_Id + ", Name: " + this.Name_Long + ", Current Temperature: " + this.Current_Temperature + ", Target temperature: " + this.Target_Temperature;
+        }
     }
 }

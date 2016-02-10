@@ -125,7 +125,7 @@ namespace NestTest.Controllers
             }
         }
 
-        public async Task<JsonResult> GetDeviceData(string accessToken)
+        public async Task<string> GetDeviceData(string accessToken)
         {
             // CREATE A CLIENT WE CAN ACCESS DATA THROUGH
             var url = "https://developer-api.nest.com";
@@ -141,8 +141,10 @@ namespace NestTest.Controllers
             string curr_temp = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].ambient_temperature_c;
             string tar_temp = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].target_temperature_c;
             Thermostat myThermostat = new Thermostat(dev_id, name, curr_temp, tar_temp);
-            
-            return Json(devices, JsonRequestBehavior.AllowGet);
+
+            //return Json(devices, JsonRequestBehavior.AllowGet);
+            return myThermostat.ToString();
+
         }
 
         public async Task<JsonResult> GetThermostatData(string accessToken)
