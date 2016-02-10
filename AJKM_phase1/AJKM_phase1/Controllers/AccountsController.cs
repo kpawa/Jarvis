@@ -290,8 +290,8 @@ namespace AJKM_phase1.Controllers
         {
             ThermostatRepo repo = new ThermostatRepo();
             var t = await repo.GetThermostat();
-            ViewBag.thermostat = t;
-            return View();
+            //ViewBag.thermostat = t;
+            return View(t);
         }
         public ActionResult AccountView()
         {
