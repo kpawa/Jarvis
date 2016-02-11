@@ -5,14 +5,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+
+
 <div class="container">
-    <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+    <p>@DateTime.Now.ToString("F")</p>
 
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
+        <div class="form-horizontal">
             <div class="col-sm-8 page-content">
-                <h4>AspNetRole</h4>
+                <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
@@ -35,14 +39,15 @@
                     </div>
                 </div>
             </div>
-    }
+            </div>
+            }
             <div style="padding-left:20px; border-left: 1px solid #333;" class="col-sm-4 side-bar">
-                    @Html.ActionLink("Register Providers", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
-                    @Html.ActionLink("Data View", "Data", null, new { @class = "btn btn-default btn-lg btn-block" })
-                    @Html.ActionLink("Account View", "ViewAllConsumerAccounts", null, new { @class = "btn btn-default btn-lg btn-block" })
-                    @Html.ActionLink("AdminDashboard", "AdminDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
-                    @Html.ActionLink("AddRole", "AddRole", null, new { @class = "btn btn-default btn-lg btn-block" })
-                    @Html.ActionLink("AddUserToRole", "AddUserToRole", null, new { @class = "btn btn-default btn-lg btn-block" })
+                @Html.ActionLink("Register Providers", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
+                @Html.ActionLink("Data View", "Data", null, new { @class = "btn btn-default btn-lg btn-block" })
+                @Html.ActionLink("Account View", "ViewAllConsumerAccounts", null, new { @class = "btn btn-default btn-lg btn-block" })
+                @Html.ActionLink("AdminDashboard", "AdminDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
+                @Html.ActionLink("AddRole", "AddRole", null, new { @class = "btn btn-default btn-lg btn-block" })
+                @Html.ActionLink("AddUserToRole", "AddUserToRole", null, new { @class = "btn btn-default btn-lg btn-block" })
             </div>
         </div>
 

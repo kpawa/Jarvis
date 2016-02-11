@@ -47,8 +47,9 @@
     </div>
 </div>
 
-<div class="col-sm-4 side-bar">
-    <div class="row col-sm-12">
+
+
+    <div style="padding-left:20px; border-left: 1px solid #333;" class="col-sm-4 side-bar">
         <div class="col-sm-12">
             <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("ConsumerDashboard", "ConsumerDashboard")</button>
             <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Data View", "Data")</button>
@@ -56,6 +57,12 @@
             <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Register Device", "RegisterDevices")</button>
             <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("Insights", "Insights")</button>
             <button type="button" class="btn btn-default btn-lg btn-block">@Html.ActionLink("DeviceManager", "DeviceManager")</button>
+        </div>
+    </div>
+
+<div class="col-sm-4 side-bar">
+    <div class="row col-sm-12">
+        <div class="col-sm-12">
 
             <h2>Total Consumption</h2>
             <p>Electricity Consumption (2015): 480 KW/h</p>
@@ -68,22 +75,11 @@
             <p>Cleaning Supplies</p>
             <p>Add a new supplier</p>
         </div>
-        
+
         <hr>
 
-
     </div>
 </div>
 
 
-<div style="padding-left:20px; border-left: 1px solid #333;" class="col-sm-4 side-bar">
 
-    <div class="col-sm-12">
-        @Html.ActionLink("Register Providers", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("Data View", "Data", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("Account View", "ViewAllConsumerAccounts", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("AdminDashboard", "AdminDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("AddRole", "AddRole", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("AddUserToRole", "AddUserToRole", null, new { @class = "btn btn-default btn-lg btn-block" })
-    </div>
-</div>
