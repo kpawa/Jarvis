@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AJKM_phase1.ViewModels.Thermostat
+@{
     ViewBag.Title = "Consumer Dashboard";
 }
 
@@ -11,56 +12,26 @@
     <div>
         @{ 
 
-            @Html.Raw(ViewBag.thermostat.ToString())
+            //@Html.Raw(ViewBag.thermostat.ToString())
         }
         <div>
             <table class="table table-condensed table-responsive">
                 <tr>
                     <th style="width: 200px;">Device Id</th>
-                    <th style="width: 200px;">State</th>
-                    <th style="width: 200px;">Time</th>
-                    <th style="width: 200px;">KW/h</th>
+                    <th style="width: 200px;">Name</th>
+                    <th style="width: 200px;">Current Temp</th>
+                    <th style="width: 200px;">Target Temp</th>
                 </tr>
+
                 <tr>
-                    <td>NestLabs Thermostat</td>
-                    <td>23 degrees Celsius</td>
-                    <td>5 mins. ago</td>
-                    <td>0.002</td>
-                </tr>
-                <tr>
-                    <td>WeMo Light #1</td>
-                    <td>Off</td>
-                    <td>2 hous ago</td>
-                    <td>0.01</td>
-                </tr>
-                <tr>
-                    <td>WeMo Light #2</td>
-                    <td>On</td>
-                    <td>10 min. ago</td>
-                    <td>0.1</td>
-                </tr>
-                <tr>
-                    <td>June Intelligent Oven</td>
-                    <td>350 degrees Celsius</td>
-                    <td>5 min. ago</td>
-                    <td>0.1</td>
-                </tr>
-                <tr>
-                    <td style="text-overflow: ellipsis;">LG Smart ThinQ Refrigerator</td>
-                    <td style="text-overflow: ellipsis;">Fridge: 3 degrees Celsius/ IceBox: -2 degrees Celsius</td>
-                    <td style="text-overflow: ellipsis;">10 min. ago</td>
-                    <td>2.3</td>
-                </tr>
-                <tr>
-                    <td>Apple TV</td>
-                    <td>On - Channel 43</td>
-                    <td>5 min. ago</td>
-                    <td>0.8</td>
+                    <td>@Html.DisplayFor(model => model.Device_Id)</td>
+                    <td>@Html.DisplayFor(model => model.Name_Long)</td>
+                    <td>@Html.DisplayFor(model => model.Current_Temperature)</td>
+                    <td>@Html.DisplayFor(model => model.Target_Temperature)</td>
                 </tr>
             </table>
         </div>
-
-    </div>
+</div>
 </div>
 <div style="padding-left:20px;"class="col-sm-4 side-bar">
     @Html.ActionLink("Dashboard", "ConsumerDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })

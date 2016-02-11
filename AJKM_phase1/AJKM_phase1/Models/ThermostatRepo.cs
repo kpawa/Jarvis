@@ -52,10 +52,10 @@ namespace AJKM_phase1.Models
 
             var jsonParsed = JsonConvert.DeserializeObject<dynamic>(devices);
             var thermostats = jsonParsed.thermostats;
-            string dev_id = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].device_id;
-            string name = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].name_long;
-            string curr_temp = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].ambient_temperature_c;
-            string tar_temp = jsonParsed["thermostats"]["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].target_temperature_c;
+            string dev_id = jsonParsed["thermostats"]["is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq"].device_id;
+            string name = jsonParsed["thermostats"]["is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq"].name_long;
+            string curr_temp = jsonParsed["thermostats"]["is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq"].ambient_temperature_c;
+            string tar_temp = jsonParsed["thermostats"]["is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq"].target_temperature_c;
             Thermostat myThermostat = new Thermostat(dev_id, name, curr_temp, tar_temp);
             return myThermostat;
         }
