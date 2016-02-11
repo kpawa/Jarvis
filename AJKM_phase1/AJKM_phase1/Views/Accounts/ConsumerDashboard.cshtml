@@ -1,42 +1,58 @@
-﻿@model AJKM_phase1.ViewModels.Thermostat
+﻿@model IEnumerable<AJKM_phase1.ViewModels.Thermostat>
+
 @{
     ViewBag.Title = "Consumer Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
+    <div class="col-sm-8 page-content">
+        <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+        <img style="width: 100%;" src="~/images/energy.PNG" />
 
-    <p>@DateTime.Now.ToString("F")</p>
-<div  class="col-sm-8 page-content">
-    <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
-    <img style="width: 100%;" src="~/images/energy.PNG"/>
-    <div>
-        @{ 
-
-            //@Html.Raw(ViewBag.thermostat.ToString())
-        }
         <div>
-            <table class="table table-condensed table-responsive">
+            <table class="table col-md-12">
                 <tr>
-                    <th style="width: 200px;">Device Id</th>
-                    <th style="width: 200px;">Name</th>
-                    <th style="width: 200px;">Current Temp</th>
-                    <th style="width: 200px;">Target Temp</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Current_Temperature)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Target_Temperature)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name_Long)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Device_Id)
+                    </th>
+                    <th></th>
                 </tr>
 
-                <tr>
-                    <td>@Html.DisplayFor(model => model.Device_Id)</td>
-                    <td>@Html.DisplayFor(model => model.Name_Long)</td>
-                    <td>@Html.DisplayFor(model => model.Current_Temperature)</td>
-                    <td>@Html.DisplayFor(model => model.Target_Temperature)</td>
-                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Current_Temperature)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Target_Temperature)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name_Long)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Device_Id)
+                        </td>
+                    </tr>
+                }
+
             </table>
         </div>
+    </div>
+    <div style="padding-left:20px;" class="col-sm-4 side-bar">
+        @Html.ActionLink("Dashboard", "ConsumerDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
+        @Html.ActionLink("Account", "AccountView", null, new { @class = "btn btn-default btn-lg btn-block" })
+        @Html.ActionLink("Connected Devices", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
+        @Html.ActionLink("Insights", "Insights", null, new { @class = "btn btn-default btn-lg btn-block" })
+    </div>
 </div>
-</div>
-<div style="padding-left:20px;"class="col-sm-4 side-bar">
-    @Html.ActionLink("Dashboard", "ConsumerDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
-    @Html.ActionLink("Account", "AccountView", null, new { @class = "btn btn-default btn-lg btn-block" })
-    @Html.ActionLink("Connected Devices", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
-    @Html.ActionLink("Insights", "Insights", null, new { @class = "btn btn-default btn-lg btn-block" })
-</div>
- </div>
