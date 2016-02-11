@@ -154,11 +154,6 @@ namespace NestTest.Controllers
 
             dynamic devices = await fb.GetAsync("devices/thermostats");
 
-            var jsonParsed = JsonConvert.DeserializeObject<dynamic>(devices);
-            string name = jsonParsed["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].name_long;
-            string temp = jsonParsed["5TN0NLa65q3XoSjECHNUvI-BBzEt2ynq"].ambient_temperature_f;
-            Thermostat myThermostat = new Thermostat(name, temp);
-
             return Json(devices, JsonRequestBehavior.AllowGet);
         }
 
