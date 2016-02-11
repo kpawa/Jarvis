@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using FirebaseSharp.Portable;
 using AJKM_phase1.ViewModels;
 using System.Threading.Tasks;
@@ -11,6 +12,38 @@ namespace AJKM_phase1.Models
     public class ThermostatRepo
     {
         const string ACCESS_TOKEN = "c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49";
+
+
+        // WILLR RETURN A LIST OF ALL THERMOSTATS WITH THIER NAME, STATE etc...
+        public async Task<IEnumerable<Thermostat>> GetThermostats()
+        {
+            var url = "https://developer-api.nest.com";
+            var fb = new Firebase(url, ACCESS_TOKEN);
+            dynamic devices = await fb.GetAsync("devices/thermostats"); // will return a string
+            dynamic devicesJSON = JObject.Parse(devices);
+
+            List<Thermostat> thermostats = new List<Thermostat>();
+            foreach(dynamic device in devicesJSON)
+            {
+                // can use this to access properties of thermostat
+                // i.e. device.First.humidity;
+                var thermostatJSON = device.First;            
+                Thermostat thermostat = new Thermostat();
+
+                thermostat.Device_Id = thermostatJSON.device_id; 
+                thermostat.Name_Long = thermostatJSON.name_long;
+                thermostat.Current_Temperature = thermostatJSON.ambient_temperature_c;
+                thermostat.Target_Temperature = thermostatJSON.target_temperature_c;
+
+                thermostats.Add(thermostat);
+            }
+
+            return thermostats;
+
+        }
+
+
+
         public async Task<Thermostat> GetThermostat()
         {
             var url = "https://developer-api.nest.com";

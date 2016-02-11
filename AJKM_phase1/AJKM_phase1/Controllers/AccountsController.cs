@@ -18,7 +18,7 @@ namespace AJKM_phase1.Controllers
     public class AccountsController : Controller
     {
         // leave blank
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
             return View();
         }
@@ -290,8 +290,11 @@ namespace AJKM_phase1.Controllers
         {
             ThermostatRepo repo = new ThermostatRepo();
             var t = await repo.GetThermostat();
+
+            IEnumerable<Thermostat> thermostats = await repo.GetThermostats();
+
             //ViewBag.thermostat = t;
-            return View(t);
+            return View(thermostats);
         }
         public ActionResult AccountView()
         {
