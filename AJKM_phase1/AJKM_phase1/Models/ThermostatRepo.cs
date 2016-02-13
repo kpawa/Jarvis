@@ -32,7 +32,7 @@ namespace AJKM_phase1.Models
 
                 thermostat.Device_Id = thermostatJSON.device_id; 
                 thermostat.Name_Long = thermostatJSON.name_long;
-                thermostat.Current_Temperature = thermostatJSON.ambient_temperature_c;
+                thermostat.Current_Temperature = thermostatJSON.ambient_temperature_c; 
                 thermostat.Target_Temperature = thermostatJSON.target_temperature_c;
 
                 thermostats.Add(thermostat);
