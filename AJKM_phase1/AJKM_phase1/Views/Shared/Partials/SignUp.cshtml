@@ -1,7 +1,15 @@
-﻿
+﻿<head>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <style>
+    body { background-image: url(/images/mobile-icons-background.jpg);
+    background-size: cover; }
+    </style>
+
+</head>
 <form id="register" class="form-horizontal col-sm-12" action="#" enctype="multipart/form-data" method="post">
-    <fieldset class="fieldset-border">
-        <legend class="fieldset-border"> Sign Up </legend>
+    <fieldset class="fieldset-border" style="background-color: black; color: white; opacity: 0.8;">
+        <legend class="fieldset-border" style="color: silver;"> Sign Up </legend>
         <div class="form-group">
             <label class="control-label col-sm-3" for="username">Username:</label>
             <div class="col-sm-9">
@@ -34,8 +42,14 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
-                <button class="btn btn-default" onclick="location.href='@Url.Action("Login", "Accounts")';return false;">Sign up</button>
+                <div class="g-recaptcha inp50" data-sitekey="6LfH2xcTAAAAAKXqeM6VL84Z319asFJcL4s2-Ehb"></div>
+                <input name="submit" type="submit" value="Sign-up" class="btn btn-info btn-lg btn-block" onclick="location.href='@Url.Action("Login", "Accounts")';return false;" />
+                @Html.Raw(ViewBag.CaptchaResponse)
             </div>
         </div>
     </fieldset>
 </form>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
