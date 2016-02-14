@@ -4,38 +4,90 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Contact Us</h2>
+<head>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
-<form>
-    <label>First Name</label><br />
-    <input 
-        type="text"
-        name="firstName"
-        ng-model="firstName.text"
-        required/><br /><br />
-    <label>Last Name</label><br />
-    <input 
-        type="text"
-        name="lastName"
-        ng-model="lastName.text"
-        required /><br /><br />
-    <label>Email Address</label><br />
-    <input
-        type="email"
-        name="input"
-        ng-model="email.txt"
-        required /><br /><br />
-    <label>Subject</label><br />
-    <input
-        type="text"
-        name="subject"
-        ng-model="subject.text" /><br /><br />
-    <label>Message</label><br />
-    <textarea id="messageTextArea"
-            name="message"
-            ng-model="message.body"
-            ng-required="true">
-    </textarea><br /><br />
+    <style>
+        body {
+            background-image: url(/images/man-coffee-cup-pen.jpg);
+            background-size: cover;
+        }
+    </style>
 
-    <input type="submit" value="Send Email" />
+</head>
+<form id="register" class="form-horizontal col-sm-12" action="#" enctype="multipart/form-data" method="post">
+    <fieldset class="fieldset-border" style="background-color: black; color: white; opacity: 0.8;">
+        <legend class="fieldset-border" style="color: silver;"> Contact Us </legend>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="firstName">First Name:</label>
+            <div class="col-sm-9">
+                <input type="text"
+                       name="firstName"
+                       ng-model="firstName.text"
+                       class="form-control"
+                       placeholder="Pat"
+                       required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="lastName">Last Name:</label>
+            <div class="col-sm-9">
+                <input type="text"
+                       name="lastName"
+                       ng-model="lastName.text"
+                       class="form-control"
+                       placeholder="McGee"
+                       required />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="email">Email:</label>
+            <div class="col-sm-9">
+                <input id="email"
+                       class="form-control"
+                       name="email"
+                       type="email"
+                       ng-model="email.txt"
+                       placeholder="pmcgee&#064gmail.com"
+                       required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="subject">Subject: </label>
+            <div class="col-sm-9">
+
+                <input type="text"
+                       name="subject"
+                       ng-model="subject.text"
+                       class="form-control"
+                       placeholder="Please be specific." />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="lastName">Message:</label>
+            <div class="col-sm-9">
+                <textarea id="messageTextArea"
+                          name="message"
+                          ng-model="message.body"
+                          class="form-control"
+                          ng-required="true"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <div class="g-recaptcha inp50" data-sitekey="6LfH2xcTAAAAAKXqeM6VL84Z319asFJcL4s2-Ehb"></div>
+                <input name="submit" type="submit" value="Sign-up" class="btn btn-info btn-lg btn-block" onclick="location.href='@Url.Action("#", "#")';return false;" />
+                @Html.Raw(ViewBag.CaptchaResponse)
+            </div>
+        </div>
+    </fieldset>
 </form>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
