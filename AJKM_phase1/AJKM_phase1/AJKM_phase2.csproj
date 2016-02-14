@@ -185,6 +185,7 @@
     <Content Include="images\floor_plan.png" />
     <Content Include="images\graph-image.png" />
     <Content Include="images\man-coffee-cup-pen.jpg" />
+    <Content Include="images\man-with-laptop-chalkboard-thinking.jpg" />
     <Content Include="images\mobile-icons-background.jpg" />
     <Content Include="images\Pie_Chart.jpg" />
     <Content Include="images\sales.PNG" />
@@ -233,6 +234,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\man-with-laptop-chalkboard-thinking.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
