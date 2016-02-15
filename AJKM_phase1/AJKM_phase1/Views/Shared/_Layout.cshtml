@@ -28,14 +28,8 @@
                     @{
                         if (Request.IsAuthenticated && User.IsInRole("admin"))
                         {
+                            <li><a href="@Url.Action("AdminDashBoard", "Accounts")">Dashboard</a></li>
 
-
-
-
-                                <li><a href="@Url.Action("AdminDashBoard", "Accounts")">Dashboard</a></li>
- 
-
-                            
                         }
                         else if (Request.IsAuthenticated && User.IsInRole("member"))
                         {
@@ -49,23 +43,23 @@
 
                     <li><a href="@Url.Action("About", "Home")">About</a></li>
                     <li><a href="@Url.Action("Support", "Home")">Support</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view?usp=sharing" target="_blank">Documentation</a></li>
-                        @{
-                            if (!Request.IsAuthenticated)
-                            {
-                                <li><a href="@Url.Action("Login", "Accounts")">Log in</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view?usp=sharing" target="_blank">Documentation</a></li>
+                    @{
+                        if (!Request.IsAuthenticated)
+                        {
+                            <li><a href="@Url.Action("Login", "Accounts")">Log in</a></li>
                                 <li><a href="@Url.Action("Register", "Accounts")">Register</a></li>
-                            }
-                            else if (Request.IsAuthenticated)
-                            {
-                                <li><a href="#">Hello, @Html.Raw(User.Identity.Name)</a></li>
-                                <li><a href="@Url.Action("Logout", "Accounts")">Log out</a></li>
-                            }
                         }
-                    </ul>
-                </div>
+                        else if (Request.IsAuthenticated)
+                        {
+                            <li><a href="#">Hello, @Html.Raw(User.Identity.Name)</a></li>
+                                <li><a href="@Url.Action("Logout", "Accounts")">Log out</a></li>
+                        }
+                    }
+                </ul>
+            </div>
 
         </div>
     </div>
