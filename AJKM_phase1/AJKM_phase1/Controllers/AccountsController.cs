@@ -285,10 +285,10 @@ namespace AJKM_phase1.Controllers
         /* ================= */
         public async Task<ActionResult> ConsumerDashboard()
         {
-            ThermostatRepo repo = new ThermostatRepo();
+            ThermostatVMRepo repo = new ThermostatVMRepo();
             var t = await repo.GetThermostat();
 
-            IEnumerable<Thermostat> thermostats = await repo.GetThermostats();
+            IEnumerable<ThermostatVM> thermostats = await repo.GetThermostats();
 
             //ViewBag.thermostat = t;
             return View(thermostats);
