@@ -44,11 +44,11 @@
 
         <div>
             @{
-                Html.RenderPartial("Partials/Login");
+                Html.RenderPartial("Partials/LoginForm");
             }
         </div>
 
-    </div>
+    </div> 
     <div style="padding-left:20px;" class="col-sm-4 side-bar">
         @Html.ActionLink("Dashboard", "ConsumerDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
         @Html.ActionLink("Account", "AccountView", null, new { @class = "btn btn-default btn-lg btn-block" })

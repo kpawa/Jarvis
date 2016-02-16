@@ -413,3 +413,9 @@ D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.xml
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csproj.App.config
 D:\zzz Storage\Documents\SSD\Internal Project - Phase II\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csprojResolveAssemblyReference.cache
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\FirebaseSharp.Portable.dll
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Extensions.dll
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.dll
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Extensions.xml
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Net.Http.Primitives.xml
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csproj.App.config
