@@ -9,7 +9,6 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="~/Content/customStyles/footer.css" rel="stylesheet" />
-
     <link href="~/Content/scrollTheme/css/scrolling-nav.css" rel="stylesheet" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,8 +49,19 @@
                         }
                     }
 
-                    <li><a class="page-scroll" href="@Html.Raw(@*@Url.Action("AboutSupport", "Home") +*@ "#about")"> About </a></li>
-                    <li><a class="page-scroll" href="@Html.Raw(@*@Url.Action("AboutSupport", "Home") +*@ "#support")"> Support </a></li>
+                    @{
+                        if (ViewBag.Title == "AboutSupport")
+                        {
+                            <li><a class="page-scroll" href="#about"> About </a></li>
+                            <li><a class="page-scroll" href="#support"> Support </a></li>
+                        }
+                        else
+                        {
+                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#about")"> About </a></li>
+                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#support")"> Support </a></li>
+                        }
+                    }
+                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view?usp=sharing" target="_blank">Documentation</a></li>
@@ -75,7 +85,7 @@
         <!-- /.container -->
     </nav>
 
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
     </div>
     <footer class="col-sm-12 clearfix">
@@ -95,6 +105,7 @@
                 <ul>
                     <li> <a href="#"> Login </a></li>
                     <li> <a href="#"> Register </a></li>
+                    <li> <a href="#"> About </a></li>
                     <li><a href="#"> Support </a> </li>
                 </ul>
             </div>
@@ -108,11 +119,9 @@
                 <hr />
                 <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </div>
-
     </footer>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>   
     <script src="~/Content/scrollTheme/js/jquery.easing.min.js"></script>
     <script src="~/Content/scrollTheme/js/scrolling-nav.js"></script>
     @RenderSection("Scripts", false)

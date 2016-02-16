@@ -1,19 +1,52 @@
-﻿
+﻿/*section .row {
+    position: relative;
+    left: -40px;
+    background: #EEEEE;
+    padding-top: 40px;
+}*/
 
-.container > section {
-    text-align: left;
-    padding: 20px;
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body-content {
+    padding: 0px;
+}
+
+.row > div {
+    padding-left: 0px;
+}
+
+.row form {
+    padding: 0px;
+}
+
+section {
+    height: 100%;
+    padding: 100px 0px;
+    text-align: center;
+    background: #EEE;
+}
+
+.support-section {
+
+    background-color: lightseagreen;
 }
 
 .about-section {
-    height: 100%;
-    padding-top: 20px;
-    margin-top:20px;
-    text-align: center;
-    background: #eee;
+        background-color: cadetblue;    
+    margin: 0px;
+}
+.support-section h1 {
+    margin-bottom: 40px;
 }
 
-.about-section > * {
-    padding-top: 20px;
-    margin-top: 20px;    
+.faq-section {
+
+        background-color: #eee;
 }
+
+/*fieldset {
+    background-color: black; color: white; opacity: 0.8;
+}*/

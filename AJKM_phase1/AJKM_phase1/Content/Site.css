@@ -100,6 +100,11 @@ legend.fieldset-border {
     margin: 10px;
 }
 
+.about-support-container {
+    clear: both;
+}
+
+
 .home-page .about-support-container .col-sm-6 {
     padding: 0px;
 }
@@ -140,8 +145,13 @@ legend.fieldset-border {
     z-index: 2;
 }
 
-.home-page .providers div {
+.home-page .providers {
+    margin-bottom: 10px;
+}
+
+.home-page .providers > div {
     margin-right: 10px;
+    height: 200px;
 }
 
 .home-page .providers .col-sm-4 {
@@ -149,6 +159,14 @@ legend.fieldset-border {
 }
 
 
+
+
 tr:nth-child(even) {background: #A9E2F3}
 tr:nth-child(odd) {background: #FFFFFF}
 
+/* === FORM STLYLES === */
+
+/* will add a transparent background to the div*/
+.opac-black {
+    background-color: black; color: white; opacity: 0.8;
+}

@@ -10,24 +10,33 @@ namespace AJKM_phase1.ViewModels
     {
         // add 2 more properties here
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "User Name:")]
         public string UserName { get; set; }
+
+        [Required]
+        [Display(Name = "First Name:")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name:")]
+        public string LastName { get; set; }
 
         [Required]
         [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$",
         ErrorMessage = "This is not a valid email address.")]
-        [Display(Name = "Email")]
+        [Display(Name = "Email:")]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Password:")]
+        [MinLength(6, ErrorMessage = "Password needs to be atleast 6 characters")]
         public string Password { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password Confirm")]
-        [Compare("Password", ErrorMessage = "The new password and confirmation password do not match.")]
+        [Display(Name = "Confirm Password:")]
+        [Compare("Password", ErrorMessage = "Passwords do not match.")]
         public string ConfirmPassword { get; set; }
     }
 }

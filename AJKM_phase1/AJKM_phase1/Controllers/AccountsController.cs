@@ -84,8 +84,9 @@ namespace AJKM_phase1.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(UserAccountVM newUser)
+        public ActionResult Register(RegisteredUser newUser)
         {
+            // TAKING THE WRONG MODEL AS INPUT???
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore)
             {
@@ -96,19 +97,16 @@ namespace AJKM_phase1.Controllers
 
             var identityUser = new IdentityUser()
             {
-                UserName = newUser.Username,
+                UserName = newUser.UserName,
                 Email = newUser.Email
             };
 
             // this threw an error, but it also worked so what gives???
             IdentityResult result = manager.Create(identityUser, newUser.Password);  
-
             if (result.Succeeded)
             {
                 CreateTokenProvider(manager, EMAIL_CONFIRMATION);
-
                 // identityUser.Id use this to create an entry in our accounts table 
-
                 var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
                 var callbackUrl = Url.Action("ConfirmEmail", "Accounts",
                                                 new { userId = identityUser.Id, code = code },
@@ -119,14 +117,13 @@ namespace AJKM_phase1.Controllers
 
                 
                 ViewBag.FakeConfirmation = email;
-
                 UserAccountVMRepo uaRepo = new UserAccountVMRepo();
                 uaRepo.CreateAccount(newUser.FirstName, newUser.LastName, identityUser.Id);
 
                 // CREATE WITH CONSUMER ROLE BY DEFAULT
                 SecurityEntities context = new SecurityEntities();
                 AspNetUser user = context.AspNetUsers
-                                 .Where(u => u.UserName == newUser.Username).FirstOrDefault();
+                                 .Where(u => u.UserName == newUser.UserName).FirstOrDefault();
                 AspNetRole role = context.AspNetRoles
                                  .Where(r => r.Name == "consumer").FirstOrDefault();
 

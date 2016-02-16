@@ -177,7 +177,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\customStyles\about-support.css" />
     <Content Include="Content\customStyles\footer.css" />
+    <Content Include="Content\customStyles\login.css" />
+    <Content Include="Content\customStyles\RegisterForm.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\scrollTheme\css\bootstrap.css" />
     <Content Include="Content\scrollTheme\css\bootstrap.min.css" />
@@ -337,8 +340,8 @@
     <Content Include="Views\Home\FAQ.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\Partials\Login.cshtml" />
-    <Content Include="Views\Shared\Partials\SignUp.cshtml" />
+    <Content Include="Views\Shared\Partials\LoginForm.cshtml" />
+    <Content Include="Views\Shared\Partials\RegisterForm.cshtml" />
     <Content Include="Views\Accounts\RegisterDevices.cshtml" />
     <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
     <Content Include="Views\Accounts\AccountView.cshtml" />
@@ -352,6 +355,7 @@
     <Content Include="Views\Accounts\ResetPassword.cshtml" />
     <Content Include="Views\Shared\_ScrollTheme.cshtml" />
     <Content Include="Views\Home\AboutSupport.cshtml" />
+    <Content Include="Views\Shared\Partials\SignUp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
