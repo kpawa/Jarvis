@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Web.Http;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Web.Http.Cors;
 
 namespace JarvisAPI.Controllers
 {
     public class AccountsController : ApiController
     {
         // GET: api/Accounts
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public IHttpActionResult Get()
         {
             JarvisEntities db = new JarvisEntities();
