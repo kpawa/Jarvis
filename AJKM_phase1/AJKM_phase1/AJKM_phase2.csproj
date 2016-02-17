@@ -228,6 +228,14 @@
     <Content Include="images\Pie_Chart.jpg" />
     <Content Include="images\sales.PNG" />
     <Content Include="images\smart-home.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <EntityDeploy Include="Models\SecurityEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SecurityEntities.Designer.cs</LastGenOutput>
@@ -269,16 +277,15 @@
     <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Models\SecurityEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SecurityEntities.edmx</DependentUpon>
@@ -289,7 +296,6 @@
       <DependentUpon>SecurityEntities.edmx</DependentUpon>
       <LastGenOutput>SecurityEntities.cs</LastGenOutput>
     </Content>
-    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
@@ -300,11 +306,13 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\man-with-laptop-chalkboard-thinking.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Business Logic\MailHelper.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -401,11 +409,11 @@
     <Content Include="Views\Accounts\RegisterDevices.cshtml" />
     <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
     <Content Include="Views\Accounts\AccountView.cshtml" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
     <Content Include="Views\Accounts\Login.cshtml" />
     <Content Include="Views\Accounts\Register.cshtml" />
     <Content Include="Views\Accounts\AddRole.cshtml" />
     <Content Include="Views\Accounts\AddUserToRole.cshtml" />
-    <Content Include="Views\Accounts\ConfirmEmail.cshtml" />
     <Content Include="Views\Accounts\ForgotPassword.cshtml" />
     <Content Include="Views\Accounts\ResetPassword.cshtml" />
     <Content Include="Views\Shared\_ScrollTheme.cshtml" />
@@ -413,7 +421,8 @@
     <Content Include="Views\Shared\Partials\SignUp.cshtml" />
     <Content Include="Views\Shared\_DashBoardTheme.cshtml" />
     <Content Include="Views\Home\DashTest.cshtml" />
-    <Content Include="Scripts\jquery-2.2.0.min.map" />
+    <Content Include="Views\Accounts\ConfirmEmail.cshtml" />
+    <Content Include="Views\Accounts\VerifiedEmail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

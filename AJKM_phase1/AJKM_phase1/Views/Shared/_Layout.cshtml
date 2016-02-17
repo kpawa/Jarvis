@@ -31,14 +31,10 @@
                             <li><a href="@Url.Action("AdminDashBoard", "Accounts")">Dashboard</a></li>
 
                         }
-                        else if (Request.IsAuthenticated && User.IsInRole("member"))
+                        else if (Request.IsAuthenticated && User.IsInRole("consumer"))
                         {
                             <li><a href="@Url.Action("ConsumerDashboard", "Accounts")">Dashboard</a></li>
                         }
-
-
-
-
                     }
 
                     <li><a href="@Url.Action("About", "Home")">About</a></li>
@@ -50,12 +46,12 @@
                         if (!Request.IsAuthenticated)
                         {
                             <li><a href="@Url.Action("Login", "Accounts")">Log in</a></li>
-                                <li><a href="@Url.Action("Register", "Accounts")">Register</a></li>
+                            <li><a href="@Url.Action("Register", "Accounts")">Register</a></li>
                         }
                         else if (Request.IsAuthenticated)
                         {
-                            <li><a href="#">Hello, @Html.Raw(User.Identity.Name)</a></li>
-                                <li><a href="@Url.Action("Logout", "Accounts")">Log out</a></li>
+                            <li><a href="#" class="navbar-brand">Hello, @Html.Raw(User.Identity.Name)</a></li>
+                            <li><a href="@Url.Action("Logout", "Accounts")">Log out</a></li>
                         }
                     }
                 </ul>
