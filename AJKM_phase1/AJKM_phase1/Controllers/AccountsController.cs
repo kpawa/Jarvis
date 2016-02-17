@@ -80,8 +80,6 @@ namespace AJKM_phase1.Controllers
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
                     }
-
-
                 }
             }
             return View();
@@ -141,7 +139,7 @@ namespace AJKM_phase1.Controllers
 
                 MailHelper mailer = new MailHelper();
                 string response = mailer.EmailFromArvixe(
-                                           new RegisteredUser(newUser.Email, newUser.Subject, newUser.Body = email));
+                                           new RegisteredUser(newUser.Email, newUser.Subject = "Confirm Email", newUser.Body = email));
 
                 ViewBag.Response = response;
                 return View("ConfirmEmail");
@@ -262,7 +260,7 @@ namespace AJKM_phase1.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult ForgotPassword(string email)
+        public ActionResult ForgotPassword(string email, RegisteredUser userRecovery)
         {
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
@@ -273,11 +271,18 @@ namespace AJKM_phase1.Controllers
             var callbackUrl = Url.Action("ResetPassword", "Accounts",
                                          new { userId = user.Id, code = code },
                                          protocol: Request.Url.Scheme);
-            ViewBag.FakeEmailMessage = "Please reset your password by clicking <a href=\""
+            var body = "Please reset your password by clicking <a href=\""
                                      + callbackUrl + "\">here</a>";
+
+            MailHelper mailer = new MailHelper();
+            string response = mailer.EmailFromArvixe(
+                                       new RegisteredUser(userRecovery.Email = email, userRecovery.Subject = "Password Recovery Email", userRecovery.Body = body));
+            return View("PasswordEmail");
+        }
+        public ActionResult PasswordEmail()
+        {
             return View();
         }
-
         [HttpGet]
         public ActionResult ResetPassword(string userID, string code)
         {
@@ -297,9 +302,13 @@ namespace AJKM_phase1.Controllers
 
             IdentityResult result = manager.ResetPassword(userID, passwordToken, password);
             if (result.Succeeded)
-                ViewBag.Result = "The password has been reset.";
+                ViewBag.Result = "The password has been successfully reset.";
             else
                 ViewBag.Result = "The password has not been reset.";
+            return View("SuccessPassword");
+        }
+        public ActionResult SuccessPassword()
+        {
             return View();
         }
         /* ================= */
