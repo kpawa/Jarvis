@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>   
+    
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="~/Content/customStyles/footer.css" rel="stylesheet" />
     <link href="~/Content/scrollTheme/css/scrolling-nav.css" rel="stylesheet" />
@@ -62,14 +64,21 @@
                             <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#support")"> Support </a></li>
                         }
                     }
-                    
+                   
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://drive.google.com/file/d/0B2Rf6NjOLm0STEVMM0k5NG9rT0U/view?usp=sharing" target="_blank">Documentation</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Documentation<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://docs.google.com/document/d/1Rt0qJCFHvw4oCFp6WCll64OovxDYAaqTC2Pz_-rd-cY/edit" target="_blank">Project Documentation</a></li>
+                            <li><a href="http://ajkm.kpawa.com/"> Original Prototype </a></li>                          
+                            <li>@Html.ActionLink("API", "API", "Home", null, null)</li>
+                            
+                        </ul>
+                    </li>                 
                     @{
                         if (!Request.IsAuthenticated)
                         {
-
                             <li><a href="@Url.Action("Login", "Accounts")">Log in</a></li>
                             <li><a href="@Url.Action("Register", "Accounts")">Register</a></li>
                         }
@@ -120,9 +129,7 @@
                 <hr />
                 <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </div>
-    </footer>
-
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>   
+    </footer>  
     <script src="~/Content/scrollTheme/js/jquery.easing.min.js"></script>
     <script src="~/Content/scrollTheme/js/scrolling-nav.js"></script>
     @RenderSection("Scripts", false)

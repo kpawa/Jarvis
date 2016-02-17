@@ -282,6 +282,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\api\app.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -315,6 +316,7 @@
     <Compile Include="Business Logic\MailHelper.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProvidersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -425,6 +427,7 @@
     <Content Include="Views\Accounts\VerifiedEmail.cshtml" />
     <Content Include="Views\Accounts\PasswordEmail.cshtml" />
     <Content Include="Views\Accounts\SuccessPassword.cshtml" />
+    <Content Include="Views\Home\API.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
