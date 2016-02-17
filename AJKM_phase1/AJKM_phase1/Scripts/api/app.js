@@ -1,5 +1,5 @@
 ﻿// TODO: Replace with the URL of your WebService app
-var serviceUrl = 'http://jarvis.kpawa.com/api/Providers'
+var serviceUrl = 'http://jarvis.kpawa.com//api/Providers'
 // http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api
 function sendRequest() {
     var method = $('#method').val();
@@ -7,9 +7,13 @@ function sendRequest() {
         type: method,
         url: serviceUrl
     }).done(function (data) {
+        $('#manufacturers').replaceWith("<ul id='manufacturers' />")
         for (var i = 0; i < data.providerInfo.length; i++) {
             callback(data.providerInfo[i]);
         }
+
+        
+        
     }).error(function (jqXHR, textStatus, errorThrown) {
         //$('#value1').text(jqXHR.responseText || textStatus);
     });
