@@ -11,6 +11,7 @@ using System.Web;
 using System.Web.Http.Cors;
 using System.Web.Mvc;
 using System.Threading.Tasks;
+using AJKM_phase1.Business_Logic;
 
 namespace AJKM_phase1.Controllers
 {
@@ -48,7 +49,7 @@ namespace AJKM_phase1.Controllers
 
             if (ModelState.IsValid)
             {
-                if (identityUser != null)
+                if (ValidLogin(login))
                 {
                     IAuthenticationManager authenticationManager
                                            = HttpContext.GetOwinContext().Authentication;
@@ -60,18 +61,24 @@ namespace AJKM_phase1.Controllers
                                         },
                                         DefaultAuthenticationTypes.ApplicationCookie,
                                         ClaimTypes.Name, ClaimTypes.Role);
+
                     authenticationManager.SignIn(new AuthenticationProperties
                     {
                         IsPersistent = false
                     }, identity);
-                    if (User.IsInRole("consumer"))
+                    System.Threading.Thread.Sleep(2000);
+
+
+                    SecurityEntities context = new SecurityEntities();
+                    var query = context.AspNetUsers.Where(u => u.Id == identityUser.Id).FirstOrDefault();
+
+                    if (query.AspNetRoles.Single().Name == "admin")
+                    {
+                        return RedirectToAction("AdminDashboard", "Accounts");
+                    }
+                    else if (query.AspNetRoles.Single().Name == "consumer")
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
-                    }
-                    else if (User.IsInRole("admin"))
-                    {
-
-                        return RedirectToAction("AdminDashBoard", "Accounts");
                     }
                 }
             }
@@ -102,20 +109,20 @@ namespace AJKM_phase1.Controllers
             };
 
             // this threw an error, but it also worked so what gives???
-            IdentityResult result = manager.Create(identityUser, newUser.Password);  
+            IdentityResult result = manager.Create(identityUser, newUser.Password);
             if (result.Succeeded)
             {
                 CreateTokenProvider(manager, EMAIL_CONFIRMATION);
                 // identityUser.Id use this to create an entry in our accounts table 
                 var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
-                var callbackUrl = Url.Action("ConfirmEmail", "Accounts",
+                var callbackUrl = Url.Action("VerifiedEmail", "Accounts",
                                                 new { userId = identityUser.Id, code = code },
                                                     protocol: Request.Url.Scheme);
 
                 string email = "Please confirm your account by clicking this link: <a href=\""
                                 + callbackUrl + "\">Confirm Registration</a>";
 
-                
+
                 ViewBag.FakeConfirmation = email;
                 UserAccountVMRepo uaRepo = new UserAccountVMRepo();
                 uaRepo.CreateAccount(newUser.FirstName, newUser.LastName, identityUser.Id);
@@ -129,6 +136,13 @@ namespace AJKM_phase1.Controllers
 
                 user.AspNetRoles.Add(role);
                 context.SaveChanges();
+
+                MailHelper mailer = new MailHelper();
+                string response = mailer.EmailFromArvixe(
+                                           new RegisteredUser(newUser.Email, newUser.Subject = "Confirm Email", newUser.Body = email));
+
+                ViewBag.Response = response;
+                return View("ConfirmEmail");
             }
             return View();
         }
@@ -178,7 +192,12 @@ namespace AJKM_phase1.Controllers
             }
             return true;
         }
-        public ActionResult ConfirmEmail(string userID, string code)
+        public ActionResult ConfirmEmail()
+        {
+
+            return View();
+        }
+        public ActionResult VerifiedEmail(string userID, string code)
         {
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
@@ -195,6 +214,7 @@ namespace AJKM_phase1.Controllers
                 ViewBag.Message = "Validation attempt failed!";
             }
             return View();
+
         }
         /* ============================ */
         /* ===== ADMIN PRIVILEGES ===== */
@@ -240,7 +260,7 @@ namespace AJKM_phase1.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult ForgotPassword(string email)
+        public ActionResult ForgotPassword(string email, RegisteredUser userRecovery)
         {
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
@@ -251,11 +271,18 @@ namespace AJKM_phase1.Controllers
             var callbackUrl = Url.Action("ResetPassword", "Accounts",
                                          new { userId = user.Id, code = code },
                                          protocol: Request.Url.Scheme);
-            ViewBag.FakeEmailMessage = "Please reset your password by clicking <a href=\""
+            var body = "Please reset your password by clicking <a href=\""
                                      + callbackUrl + "\">here</a>";
+
+            MailHelper mailer = new MailHelper();
+            string response = mailer.EmailFromArvixe(
+                                       new RegisteredUser(userRecovery.Email = email, userRecovery.Subject = "Password Recovery Email", userRecovery.Body = body));
+            return View("PasswordEmail");
+        }
+        public ActionResult PasswordEmail()
+        {
             return View();
         }
-
         [HttpGet]
         public ActionResult ResetPassword(string userID, string code)
         {
@@ -275,14 +302,19 @@ namespace AJKM_phase1.Controllers
 
             IdentityResult result = manager.ResetPassword(userID, passwordToken, password);
             if (result.Succeeded)
-                ViewBag.Result = "The password has been reset.";
+                ViewBag.Result = "The password has been successfully reset.";
             else
                 ViewBag.Result = "The password has not been reset.";
+            return View("SuccessPassword");
+        }
+        public ActionResult SuccessPassword()
+        {
             return View();
         }
         /* ================= */
         /* ===== PAGES ===== */
         /* ================= */
+        [Authorize(Roles ="consumer")]
         public async Task<ActionResult> ConsumerDashboard()
         {
             ThermostatVMRepo repo = new ThermostatVMRepo();
@@ -313,6 +345,7 @@ namespace AJKM_phase1.Controllers
         {
             return View();
         }
+        [Authorize(Roles = "admin")]
         public ActionResult AdminDashboard()
         {
             return View();

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\A00867806\Desktop\local\AJKM_phase1\AJKM_phase1\Models\SecurityEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\A00867806\Desktop\Local Jarvis\AJKM_phase1\AJKM_phase1\Models\SecurityEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -38,5 +38,17 @@ namespace AJKM_phase1.ViewModels
         [Display(Name = "Confirm Password:")]
         [Compare("Password", ErrorMessage = "Passwords do not match.")]
         public string ConfirmPassword { get; set; }
+        public string Body { get; set; }
+        public string Subject { get; set; }
+
+        public RegisteredUser() { }
+        public RegisteredUser(string email, string subject, string body)
+        {
+            Email = email;
+            Subject = subject;
+            Body = body;
+
+        }
+        
     }
 }

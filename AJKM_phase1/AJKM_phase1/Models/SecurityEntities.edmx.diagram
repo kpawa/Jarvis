@@ -6,8 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="ce32dc1a4cda49a78743b8b3851fe74a" Name="Diagram1">
         <EntityTypeShape EntityType="Jarvis2SecurityModel.C__MigrationHistory" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetRole" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetRole" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetUserClaim" Width="2" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Jarvis2SecurityModel.AspNetUser" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="Jarvis2SecurityModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
