@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+		<h1> How to use Jarvis API:  </h1>
+		
+		<p> Here is the URL: <a href="http://localhost:21360/api/Accounts">http://localhost:21360/api/Accounts</a> </p>
+		
+		<p> This is the shape of the JSON that will come back </p>
+		<img src="api-data.PNG" />
+		
+		<p> Click the button to get data back </p>	
+        <form method="get" action="api/Accounts">  
+			<input type="button" value="Get" onclick="sendRequest()" /> <br />
+            <span id='value1'>(Result)<br/></span>
+            
+        </form>
+        <br/>
+    </body>
+</html>

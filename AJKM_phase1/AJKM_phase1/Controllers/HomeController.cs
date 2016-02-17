@@ -42,5 +42,10 @@ namespace AJKM_phase1.Controllers
         {
             return View();
         }
+
+        public ActionResult API()
+        {
+            return View();
+        }
     }
 }

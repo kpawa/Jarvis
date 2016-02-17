@@ -45,9 +45,10 @@ namespace AJKM_phase1.ViewModels
         public RegisteredUser(string email, string subject, string body)
         {
             Email = email;
-            Subject = "Confirm Email";
+            Subject = subject;
             Body = body;
 
         }
+        
     }
 }

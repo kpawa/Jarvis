@@ -186,6 +186,7 @@
       <DependentUpon>JarvisDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\ProvidersController.cs" />
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>JarvisDB.tt</DependentUpon>
     </Compile>
@@ -244,6 +245,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Providers\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

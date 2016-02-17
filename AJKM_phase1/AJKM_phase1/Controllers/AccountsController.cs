@@ -68,17 +68,18 @@ namespace AJKM_phase1.Controllers
                     }, identity);
                     System.Threading.Thread.Sleep(2000);
 
-                    if (User.IsInRole("consumer"))
+
+                    SecurityEntities context = new SecurityEntities();
+                    var query = context.AspNetUsers.Where(u => u.Id == identityUser.Id).FirstOrDefault();
+
+                    if (query.AspNetRoles.Single().Name == "admin")
+                    {
+                        return RedirectToAction("AdminDashboard", "Accounts");
+                    }
+                    else if (query.AspNetRoles.Single().Name == "member")
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
                     }
-                    else if (User.IsInRole("admin"))
-                    {
-
-                        return RedirectToAction("AdminDashBoard", "Accounts");
-                    }
-
-
                 }
             }
             return View();
@@ -138,7 +139,7 @@ namespace AJKM_phase1.Controllers
 
                 MailHelper mailer = new MailHelper();
                 string response = mailer.EmailFromArvixe(
-                                           new RegisteredUser(newUser.Email, newUser.Subject, newUser.Body = email));
+                                           new RegisteredUser(newUser.Email, newUser.Subject = "Confirm Email", newUser.Body = email));
 
                 ViewBag.Response = response;
                 return View("ConfirmEmail");
@@ -259,7 +260,7 @@ namespace AJKM_phase1.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult ForgotPassword(string email)
+        public ActionResult ForgotPassword(string email, RegisteredUser userRecovery)
         {
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
@@ -270,11 +271,18 @@ namespace AJKM_phase1.Controllers
             var callbackUrl = Url.Action("ResetPassword", "Accounts",
                                          new { userId = user.Id, code = code },
                                          protocol: Request.Url.Scheme);
-            ViewBag.FakeEmailMessage = "Please reset your password by clicking <a href=\""
+            var body = "Please reset your password by clicking <a href=\""
                                      + callbackUrl + "\">here</a>";
+
+            MailHelper mailer = new MailHelper();
+            string response = mailer.EmailFromArvixe(
+                                       new RegisteredUser(userRecovery.Email = email, userRecovery.Subject = "Password Recovery Email", userRecovery.Body = body));
+            return View("PasswordEmail");
+        }
+        public ActionResult PasswordEmail()
+        {
             return View();
         }
-
         [HttpGet]
         public ActionResult ResetPassword(string userID, string code)
         {
@@ -294,14 +302,19 @@ namespace AJKM_phase1.Controllers
 
             IdentityResult result = manager.ResetPassword(userID, passwordToken, password);
             if (result.Succeeded)
-                ViewBag.Result = "The password has been reset.";
+                ViewBag.Result = "The password has been successfully reset.";
             else
                 ViewBag.Result = "The password has not been reset.";
+            return View("SuccessPassword");
+        }
+        public ActionResult SuccessPassword()
+        {
             return View();
         }
         /* ================= */
         /* ===== PAGES ===== */
         /* ================= */
+        [Authorize(Roles ="consumer")]
         public async Task<ActionResult> ConsumerDashboard()
         {
             ThermostatVMRepo repo = new ThermostatVMRepo();
@@ -332,6 +345,7 @@ namespace AJKM_phase1.Controllers
         {
             return View();
         }
+        [Authorize(Roles = "admin")]
         public ActionResult AdminDashboard()
         {
             return View();
