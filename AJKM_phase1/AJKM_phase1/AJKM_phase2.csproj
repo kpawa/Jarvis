@@ -218,6 +218,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\api-data.PNG" />
     <Content Include="images\electrical_consumption_chart.jpg" />
     <Content Include="images\energy.PNG" />
     <Content Include="images\floor_plan.png" />
@@ -226,6 +227,7 @@
     <Content Include="images\man-with-laptop-chalkboard-thinking.jpg" />
     <Content Include="images\mobile-icons-background.jpg" />
     <Content Include="images\Pie_Chart.jpg" />
+    <Content Include="images\providers-data.PNG" />
     <Content Include="images\sales.PNG" />
     <Content Include="images\smart-home.png" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -282,6 +284,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\api\app.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
@@ -314,6 +317,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProvidersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -421,6 +425,7 @@
     <Content Include="Views\Shared\Partials\SignUp.cshtml" />
     <Content Include="Views\Shared\_DashBoardTheme.cshtml" />
     <Content Include="Views\Home\DashTest.cshtml" />
+    <Content Include="Views\Home\API.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
