@@ -68,14 +68,17 @@ namespace AJKM_phase1.Controllers
                     }, identity);
                     System.Threading.Thread.Sleep(2000);
 
-                    if (User.IsInRole("consumer"))
+
+                    SecurityEntities context = new SecurityEntities();
+                    var query = context.AspNetUsers.Where(u => u.Id == identityUser.Id).FirstOrDefault();
+
+                    if (query.AspNetRoles.Single().Name == "admin")
+                    {
+                        return RedirectToAction("AdminDashboard", "Accounts");
+                    }
+                    else if (query.AspNetRoles.Single().Name == "consumer")
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
-                    }
-                    else if (User.IsInRole("admin"))
-                    {
-
-                        return RedirectToAction("AdminDashBoard", "Accounts");
                     }
 
 
@@ -302,6 +305,7 @@ namespace AJKM_phase1.Controllers
         /* ================= */
         /* ===== PAGES ===== */
         /* ================= */
+        [Authorize(Roles ="consumer")]
         public async Task<ActionResult> ConsumerDashboard()
         {
             ThermostatVMRepo repo = new ThermostatVMRepo();
@@ -332,6 +336,7 @@ namespace AJKM_phase1.Controllers
         {
             return View();
         }
+        [Authorize(Roles = "admin")]
         public ActionResult AdminDashboard()
         {
             return View();
