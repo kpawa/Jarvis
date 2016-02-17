@@ -10,15 +10,15 @@
     padding-right: 15px;
 }
 
-.body-content a {	text-decoration: none; color: navy; }
-.body-content a:link { text-decoration: none; color: navy; }
-.body-content a:visited { text-decoration: none; color: purple; }
+.body-content a {	text-decoration: none; color: green; }
+.body-content a:link { text-decoration: none; color: greenyellow; }
+.body-content a:visited { text-decoration: none; color: lightseagreen; }
 .body-content a:hover { text-decoration: none; color: red;}
 .body-content a:focus { text-decoration: none; color: purple; }
 .body-content a:active { text-decoration: none; color: royalblue; }
 
     /*color: inherit;*/
-}
+
 .body-content a:hover {
     position: relative;
     top: -4px;
