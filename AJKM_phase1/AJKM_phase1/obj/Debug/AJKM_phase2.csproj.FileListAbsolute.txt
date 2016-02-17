@@ -164,7 +164,6 @@ C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.Ra
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.WebPages.xml
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.WebPages.Deployment.xml
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\bin\System.Web.WebPages.Razor.xml
-C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csprojResolveAssemblyReference.cache
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
 C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
 G:\Jalen\JalenBCIT\Project Phase 2\Jarvis-Repo\AJKM_phase1\AJKM_phase1\bin\AJKM_phase1.dll.config
@@ -476,3 +475,4 @@ C:\Users\A00867806\Desktop\Local Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_p
 C:\Users\A00867806\Desktop\Local Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csprojResolveAssemblyReference.cache
 C:\Users\A00867806\Desktop\Local Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.dll
 C:\Users\A00867806\Desktop\Local Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase1.pdb
+C:\Users\a00964517\Source\Repos\Jarvis\AJKM_phase1\AJKM_phase1\obj\Debug\AJKM_phase2.csprojResolveAssemblyReference.cache

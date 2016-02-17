@@ -161,12 +161,18 @@ legend.fieldset-border {
 
 
 
-tr:nth-child(even) {background: #A9E2F3}
-tr:nth-child(odd) {background: #FFFFFF}
+tr:nth-child(even) {background: #A9E2F3; color: black; }
+/* tr:nth-child(odd) {background: #FFFFFF} */
 
 /* === FORM STLYLES === */
 
 /* will add a transparent background to the div*/
 .opac-black {
     background-color: black; color: white; opacity: 0.8;
+}
+
+.transparent-box {
+    float: left;
+
+
 }
