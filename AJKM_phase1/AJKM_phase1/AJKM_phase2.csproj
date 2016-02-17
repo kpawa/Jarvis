@@ -312,6 +312,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Business Logic\MailHelper.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -413,7 +414,6 @@
     <Content Include="Views\Accounts\Register.cshtml" />
     <Content Include="Views\Accounts\AddRole.cshtml" />
     <Content Include="Views\Accounts\AddUserToRole.cshtml" />
-    <Content Include="Views\Accounts\ConfirmEmail.cshtml" />
     <Content Include="Views\Accounts\ForgotPassword.cshtml" />
     <Content Include="Views\Accounts\ResetPassword.cshtml" />
     <Content Include="Views\Shared\_ScrollTheme.cshtml" />
@@ -421,6 +421,8 @@
     <Content Include="Views\Shared\Partials\SignUp.cshtml" />
     <Content Include="Views\Shared\_DashBoardTheme.cshtml" />
     <Content Include="Views\Home\DashTest.cshtml" />
+    <Content Include="Views\Accounts\ConfirmEmail.cshtml" />
+    <Content Include="Views\Accounts\VerifiedEmail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

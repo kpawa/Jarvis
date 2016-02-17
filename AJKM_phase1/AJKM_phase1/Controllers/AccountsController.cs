@@ -11,6 +11,7 @@ using System.Web;
 using System.Web.Http.Cors;
 using System.Web.Mvc;
 using System.Threading.Tasks;
+using AJKM_phase1.Business_Logic;
 
 namespace AJKM_phase1.Controllers
 {
@@ -48,7 +49,7 @@ namespace AJKM_phase1.Controllers
 
             if (ModelState.IsValid)
             {
-                if (identityUser != null)
+                if (ValidLogin(login))
                 {
                     IAuthenticationManager authenticationManager
                                            = HttpContext.GetOwinContext().Authentication;
@@ -60,10 +61,13 @@ namespace AJKM_phase1.Controllers
                                         },
                                         DefaultAuthenticationTypes.ApplicationCookie,
                                         ClaimTypes.Name, ClaimTypes.Role);
+
                     authenticationManager.SignIn(new AuthenticationProperties
                     {
                         IsPersistent = false
                     }, identity);
+                    System.Threading.Thread.Sleep(2000);
+
                     if (User.IsInRole("consumer"))
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
@@ -73,6 +77,8 @@ namespace AJKM_phase1.Controllers
 
                         return RedirectToAction("AdminDashBoard", "Accounts");
                     }
+
+
                 }
             }
             return View();
@@ -102,20 +108,20 @@ namespace AJKM_phase1.Controllers
             };
 
             // this threw an error, but it also worked so what gives???
-            IdentityResult result = manager.Create(identityUser, newUser.Password);  
+            IdentityResult result = manager.Create(identityUser, newUser.Password);
             if (result.Succeeded)
             {
                 CreateTokenProvider(manager, EMAIL_CONFIRMATION);
                 // identityUser.Id use this to create an entry in our accounts table 
                 var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
-                var callbackUrl = Url.Action("ConfirmEmail", "Accounts",
+                var callbackUrl = Url.Action("VerifiedEmail", "Accounts",
                                                 new { userId = identityUser.Id, code = code },
                                                     protocol: Request.Url.Scheme);
 
                 string email = "Please confirm your account by clicking this link: <a href=\""
                                 + callbackUrl + "\">Confirm Registration</a>";
 
-                
+
                 ViewBag.FakeConfirmation = email;
                 UserAccountVMRepo uaRepo = new UserAccountVMRepo();
                 uaRepo.CreateAccount(newUser.FirstName, newUser.LastName, identityUser.Id);
@@ -129,6 +135,13 @@ namespace AJKM_phase1.Controllers
 
                 user.AspNetRoles.Add(role);
                 context.SaveChanges();
+
+                MailHelper mailer = new MailHelper();
+                string response = mailer.EmailFromArvixe(
+                                           new RegisteredUser(newUser.Email, newUser.Subject, newUser.Body = email));
+
+                ViewBag.Response = response;
+                return View("ConfirmEmail");
             }
             return View();
         }
@@ -178,7 +191,12 @@ namespace AJKM_phase1.Controllers
             }
             return true;
         }
-        public ActionResult ConfirmEmail(string userID, string code)
+        public ActionResult ConfirmEmail()
+        {
+
+            return View();
+        }
+        public ActionResult VerifiedEmail(string userID, string code)
         {
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
@@ -195,6 +213,7 @@ namespace AJKM_phase1.Controllers
                 ViewBag.Message = "Validation attempt failed!";
             }
             return View();
+
         }
         /* ============================ */
         /* ===== ADMIN PRIVILEGES ===== */
