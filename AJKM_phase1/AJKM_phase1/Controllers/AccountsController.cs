@@ -76,7 +76,7 @@ namespace AJKM_phase1.Controllers
                     {
                         return RedirectToAction("AdminDashboard", "Accounts");
                     }
-                    else if (query.AspNetRoles.Single().Name == "member")
+                    else if (query.AspNetRoles.Single().Name == "consumer")
                     {
                         return RedirectToAction("ConsumerDashboard", "Accounts");
                     }
